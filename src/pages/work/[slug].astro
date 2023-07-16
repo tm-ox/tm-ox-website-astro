@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import LightBox from "../../components/LightBox.astro";
+
+export async function getStaticPaths() {
+	const collection = await getCollection("work");
+	return collection.map((page) => ({
+		params: { slug: page.slug },
+		props: { page },
+	}));
+}
+export async function getStaticProps({ params }: any) {
+	const project = await getCollection("work");
+	const page = project.find((p) => p.slug === params.slug);
+	return { props: { page } };
+}
+const { page } = Astro.props;
+---
+
+<BaseLayout title={page.data.title}>
+	<a href={`/work/${page.data.url.prev}`}>Prev</a>
+	<a href={`/work/${page.data.url.next}`}>Next</a>
+	<article>
+		<div>
+			<p>Client:<span>{page.data.client}</span></p>
+			<p>Type:<span>{page.data.type}</span></p>
+			<p>Tools:<span>{page.data.tools}</span></p>
+			<p>
+				Website:<a href={page.data.link} target="_blank"
+					><span>{page.data.website}</span></a
+				>
+			</p>
+			<p>{page.data.description}</p>
+		</div>
+		{
+			page.data.images.flatMap((image: any, index: any) => (
+				<LightBox
+					index={index}
+					src={image.src}
+					alt={image.alt}
+					cls={image.class}
+				/>
+			))
+		}
+	</article>
+</BaseLayout>

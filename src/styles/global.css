@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-background text-primary font-jakarta tracking-wide text-left;
+  }
+  body {
+    @apply max-w-screen-xl mx-auto my-4;
+  }
+  header {
+    @apply flex justify-between sticky top-0;
+  }
+  nav {
+    @apply flex gap-4;
+  }
+  section {
+    @apply flex flex-col items-center min-h-screen w-full pb-64;
+  }
+  h1 {
+    @apply font-extrabold text-4xl md:text-5xl xl:text-6xl text-left sm:leading-[45px] md:leading-[60px] xl:leading-[68px];
+  }
+  h2 {
+    @apply font-extralight text-4xl;
+  }
+  h3 {
+    @apply font-extralight text-3xl;
+  }
+  h4 {
+    @apply text-xl font-bold tracking-wide uppercase;
+  }
+  h5 {
+    @apply font-extrabold text-sm uppercase;
+  }
+  h6 {
+    @apply text-background uppercase text-xs font-bold tracking-wider leading-none;
+  }
+  p {
+    @apply font-light text-left text-sm leading-relaxed w-full;
+  }
+  strong {
+    @apply font-semibold;
+  }
+  article {
+    @apply grid grid-cols-2 sm:grid-cols-12 gap-4 mt-4;
+  }
+  article div {
+    @apply col-span-full;
+  }
+  article img {
+    @apply rounded-md;
+  }
+  span {
+    @apply uppercase font-bold ml-1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  /* display: none; */
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: linear-gradient(transparent, #69e228, transparent);
+}

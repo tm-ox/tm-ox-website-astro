@@ -1,15 +1,31 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import * as home from "../content/pages/home.md";
+import { Content as Home } from "../content/pages/home.md";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+const work = await getCollection("work");
+work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={home.frontmatter.title}>
+	<section id="home">
+		<Home />
+	</section>
+	<section id="work">
+		<article>
+			{
+				work.map((work) => (
+					<a href={`/work/${work.slug}`} class="col-span-2">
+						<Image
+							src={work.data.cover.src}
+							alt={work.data.cover.alt}
+						/>
+					</a>
+				))
+			}
+		</article>
+	</section>
+	<section id="contact"></section>
+</BaseLayout>
