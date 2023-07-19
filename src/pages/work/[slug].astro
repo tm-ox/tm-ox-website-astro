@@ -1,7 +1,9 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import LightBox from "../../components/LightBox.astro";
+import TabNav from "../../components/TabNav.astro";
+import Arrow from "../../components/Arrow.astro";
 
 export async function getStaticPaths() {
 	const collection = await getCollection("work");
@@ -18,21 +20,32 @@ export async function getStaticProps({ params }: any) {
 const { page } = Astro.props;
 ---
 
-<BaseLayout title={page.data.title}>
-	<a href={`/work/${page.data.url.prev}`}>Prev</a>
-	<a href={`/work/${page.data.url.next}`}>Next</a>
-	<article>
-		<div>
-			<p>Client:<span>{page.data.client}</span></p>
-			<p>Type:<span>{page.data.type}</span></p>
-			<p>Tools:<span>{page.data.tools}</span></p>
-			<p>
-				Website:<a href={page.data.link} target="_blank"
-					><span>{page.data.website}</span></a
-				>
-			</p>
-			<p>{page.data.description}</p>
-		</div>
+<Layout title={page.data.title}>
+	<p class="section-title fixed top-[26px]">TM.OX</p>
+	<TabNav>
+		<Arrow
+			slot="prev"
+			direction={`/work/${page.data.url.prev}`}
+			cls="left"
+		/>
+		<Arrow
+			slot="next"
+			direction={`/work/${page.data.url.next}`}
+			cls="right"
+		/>
+	</TabNav>
+	<div class="mt-8">
+		<p>Client:<span>{page.data.client}</span></p>
+		<p>Type:<span>{page.data.type}</span></p>
+		<p>Tools:<span>{page.data.tools}</span></p>
+		<p>
+			Website:<a href={page.data.link} target="_blank"
+				><span>{page.data.website}</span></a
+			>
+		</p>
+		<p>{page.data.description}</p>
+	</div>
+	<div class="grid grid-cols-1 sm:grid-cols-12 gap-3 sm:gap-4 mt-4">
 		{
 			page.data.images.flatMap((image: any, index: any) => (
 				<LightBox
@@ -43,5 +56,5 @@ const { page } = Astro.props;
 				/>
 			))
 		}
-	</article>
-</BaseLayout>
+	</div>
+</Layout>

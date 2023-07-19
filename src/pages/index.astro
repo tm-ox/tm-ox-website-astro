@@ -1,7 +1,8 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import Layout from "../layouts/Layout.astro";
 import * as home from "../content/pages/home.md";
 import { Content as Home } from "../content/pages/home.md";
+import TabNav from "../components/TabNav.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
@@ -9,15 +10,18 @@ const work = await getCollection("work");
 work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 ---
 
-<BaseLayout title={home.frontmatter.title}>
+<Layout title={home.frontmatter.title}>
 	<section id="home">
+		<p class="section-title">TM.OX</p>
 		<Home />
 	</section>
+	<TabNav class="sticky top-6 z-50" />
 	<section id="work">
-		<article>
+		<p class="section-title">Selected Work</p>
+		<div class="grid grid-cols-2 sm:grid-cols-5 gap-4 mt-4">
 			{
 				work.map((work) => (
-					<a href={`/work/${work.slug}`} class="col-span-2">
+					<a href={`/work/${work.slug}`}>
 						<Image
 							src={work.data.cover.src}
 							alt={work.data.cover.alt}
@@ -25,7 +29,9 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 					</a>
 				))
 			}
-		</article>
+		</div>
 	</section>
-	<section id="contact"></section>
-</BaseLayout>
+	<section id="contact">
+		<p class="section-title">Contact</p>
+	</section>
+</Layout>

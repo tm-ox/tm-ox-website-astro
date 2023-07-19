@@ -4,9 +4,10 @@ module.exports = {
 	theme: {
 		colors: {
 			primary: "#69e228",
-			secondary: "#ffc620",
+			secondary: "#30405F",
 			tertiary: "#1ba6fa",
 			background: "#1e293b",
+			hover: '#47A216',
 		},
 		extend: {
 			fontFamily: {

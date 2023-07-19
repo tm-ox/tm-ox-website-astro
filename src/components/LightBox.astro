@@ -16,7 +16,7 @@ const { index, src, alt, cls } = Astro.props;
     class="lightbox-toggle hidden"
 />
 <div class="lightbox-overlay hidden">
-    <label for={`lightbox-${index}`} class="lightbox-close"> &#x2715;</label>
+    <label for={`lightbox-${index}`} class="lightbox-close">&#x2715;</label>
     <Image src={src} alt={alt} class={`${cls} w-auto`} />
     <p class="text-center mt-2">{alt}</p>
 </div>

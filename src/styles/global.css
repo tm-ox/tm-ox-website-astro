@@ -6,16 +6,16 @@
 
 @layer base {
   html {
-    @apply bg-background text-primary font-jakarta tracking-wide text-left;
+    @apply mx-auto p-6 font-jakarta tracking-wide;
   }
   body {
-    @apply max-w-screen-xl mx-auto my-4;
+    @apply bg-background text-primary max-w-screen-2xl mx-auto relative overflow-y-auto;
   }
   header {
-    @apply flex justify-between sticky top-0;
+    @apply flex fixed top-[30px];
   }
   nav {
-    @apply flex gap-4;
+    @apply flex gap-4 ml-auto;
   }
   section {
     @apply flex flex-col items-center min-h-screen w-full pb-64;
@@ -44,17 +44,20 @@
   strong {
     @apply font-semibold;
   }
-  article {
-    @apply grid grid-cols-2 sm:grid-cols-12 gap-4 mt-4;
-  }
-  article div {
-    @apply col-span-full;
-  }
-  article img {
-    @apply rounded-md;
-  }
   span {
     @apply uppercase font-bold ml-1;
+  }
+  img {
+    @apply rounded-md;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply sticky top-[30px]
+		w-fit ml-auto sm:ml-10 xl:ml-12 sm:mr-auto 
+		text-base font-bold uppercase tracking-wide
+		flex items-center h-7 sm:h-9 mt-1 mb-auto z-50;
   }
 }
 
