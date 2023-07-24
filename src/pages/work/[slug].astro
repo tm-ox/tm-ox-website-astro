@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import LightBox from "../../components/LightBox.astro";
 import TabNav from "../../components/TabNav.astro";
-import Arrow from "../../components/Arrow.astro";
+import { Icon } from "astro-icon";
 
 export async function getStaticPaths() {
 	const collection = await getCollection("work");
@@ -20,27 +20,31 @@ export async function getStaticProps({ params }: any) {
 const { page } = Astro.props;
 ---
 
-<Layout title={page.data.title}>
-	<p class="section-title fixed top-[26px]">TM.OX</p>
+<Layout title={`TM.OX - ${page.data.title}`}>
+	<p class="section-title fixed top-[30px]">TM.OX</p>
 	<TabNav>
-		<Arrow
+		<a
 			slot="prev"
-			direction={`/work/${page.data.url.prev}`}
-			cls="left"
-		/>
-		<Arrow
+			href={`/work/${page.data.url.prev}`}
+			class="bg-secondary rounded-full p-2 sm:p-1 shadow-md z-50"
+		>
+			<Icon name="ion:md-arrow-dropleft-circle" class="icon" />
+		</a>
+		<a
 			slot="next"
-			direction={`/work/${page.data.url.next}`}
-			cls="right"
-		/>
+			href={`/work/${page.data.url.next}`}
+			class="bg-secondary rounded-full p-2 sm:p-1 shadow-md z-50"
+		>
+			<Icon name="ion:md-arrow-dropright-circle" class="icon" />
+		</a>
 	</TabNav>
 	<div class="mt-8">
-		<p>Client:<span>{page.data.client}</span></p>
-		<p>Type:<span>{page.data.type}</span></p>
-		<p>Tools:<span>{page.data.tools}</span></p>
+		<p>Client:<strong class="ml-1">{page.data.client}</strong></p>
+		<p>Type:<strong class="ml-1">{page.data.type}</strong></p>
+		<p>Tools:<strong class="ml-1">{page.data.tools}</strong></p>
 		<p>
 			Website:<a href={page.data.link} target="_blank"
-				><span>{page.data.website}</span></a
+				><strong class="ml-1">{page.data.website}</strong></a
 			>
 		</p>
 		<p>{page.data.description}</p>

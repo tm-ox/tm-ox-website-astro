@@ -6,8 +6,12 @@ const { index, src, alt, cls } = Astro.props;
 
 <label for={`lightbox-${index}`} class={`${cls} lightbox-label`}>
     <div>
-        <Image src={src} alt={alt} class={`${cls} cursor-pointer`} />
-        <h6 class="bg-primary rounded-b-md px-2 py-1">{alt}</h6>
+        <Image
+            src={src}
+            alt={alt}
+            class={`${cls} cursor-pointer rounded-b-none`}
+        />
+        <div class="box"><strong>{alt}</strong></div>
     </div>
 </label>
 <input
@@ -18,7 +22,9 @@ const { index, src, alt, cls } = Astro.props;
 <div class="lightbox-overlay hidden">
     <label for={`lightbox-${index}`} class="lightbox-close">&#x2715;</label>
     <Image src={src} alt={alt} class={`${cls} w-auto`} />
-    <p class="text-center mt-2">{alt}</p>
+    <div class="box bg-opacity-0 text-primary text-center mt-2">
+        <strong>{alt}</strong>
+    </div>
 </div>
 
 <style>

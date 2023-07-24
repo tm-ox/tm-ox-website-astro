@@ -7,8 +7,10 @@ section1:
 
 # all rounded.. designer, desk monkey.. willing, able & online.
 
-Born of print and advertising:</br>
-**Adobe Creative Suite, production management, etc**
+## Born of print and advertising:</br>
 
-Increasingly UI / UX:</br>
-**Html, Css, et al., Vue (Nuxt), React (Next), etc.**
+## **Adobe Creative Suite, production management, etc**
+
+## Increasingly UI / UX:</br>
+
+## **Html, Css, et al., Vue (Nuxt), React (Next), etc.**

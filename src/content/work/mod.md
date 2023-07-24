@@ -1,6 +1,6 @@
 ---
 order: "02"
-title: TM.OX - Mrs O'Donoghue
+title: Mrs O'Donoghue
 client: Mrs O'Donoghue
 type: Identity Design
 tools: Adobe Illustrator

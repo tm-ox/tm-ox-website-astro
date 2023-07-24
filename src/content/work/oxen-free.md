@@ -1,6 +1,6 @@
 ---
 order: "01"
-title: TM.OX - Oxen Free
+title: Oxen Free
 client: Oxen Free
 type: Identity Design
 tools: Adobe Illustrator
