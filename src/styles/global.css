@@ -18,10 +18,13 @@
     @apply flex flex-col justify-center min-h-screen w-full;
   }
   h1 {
-    @apply font-extrabold text-4xl md:text-6xl xl:text-7xl text-left sm:leading-[45px] md:leading-[68px] xl:leading-[76px] mb-4;
+    @apply font-extrabold text-5xl sm:text-6xl md:text-7xl xl:text-8xl leading-[55px] sm:leading-[65px] md:leading-[75px] xl:leading-[105px] text-center sm:text-left mb-0;
   }
   h2 {
-    @apply font-extralight text-sm sm:text-base md:text-lg lg:text-xl;
+    @apply font-extralight text-sm sm:text-base md:text-lg lg:text-xl text-center sm:text-left;
+  }
+  h3 {
+    @apply font-extralight text-sm sm:text-base md:text-lg lg:text-xl text-center sm:text-left mt-2;
   }
   p {
     @apply font-light text-left text-sm leading-relaxed w-full;
@@ -48,7 +51,7 @@
     @apply fill-primary;
   }
   .arrow {
-    @apply text-secondary animate-bounce-slow mx-auto sm:ml-auto sm:mr-0;
+    @apply text-secondary animate-bounce-slow mx-auto sm:mr-auto sm:-ml-2;
   }
   .section-title {
     @apply sticky top-[33px] sm:top-[30px]

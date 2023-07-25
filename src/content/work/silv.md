@@ -29,5 +29,5 @@ images:
     class: col-span-auto sm:col-span-3 lg:col-span-2
 url:
   prev: fredst
-  next: print
+  next: oxen-free
 ---

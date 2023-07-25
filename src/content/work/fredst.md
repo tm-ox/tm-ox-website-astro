@@ -32,5 +32,5 @@ images:
     class: sm:col-span-3 lg:col-span-1;
 url:
   prev: ynk
-  next: print
+  next: silv
 ---
