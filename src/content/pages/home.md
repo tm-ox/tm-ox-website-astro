@@ -9,8 +9,8 @@ section1:
 
 ## Born of print and advertising:</br>
 
-## **Adobe Creative Suite, production management, etc**
+## **Adobe Creative Suite, production management, etc.**
 
 ## Increasingly UI / UX:</br>
 
-## **Html, Css, et al., Vue (Nuxt), React (Next), etc.**
+## **Html, Css, et al.. Astro, Vue (Nuxt), React (Next), etc.**

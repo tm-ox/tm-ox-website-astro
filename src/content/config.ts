@@ -13,14 +13,14 @@ export const collections = {
         link: z.string().optional(),
         description: z.string().optional(),
         cover: z.object({
-          src: image().refine((img) => img.width >= 640, {
+          src: image().refine((img) => img.width >= 400, {
             message: "Cover image must be at least 640 pixels wide!",
           }),
           alt: z.string(),
         }),
         images: z.array(
           z.object({
-            src: image().refine((img) => img.width >= 640, {
+            src: image().refine((img) => img.width >= 400, {
               message: "Image must be at least 640 pixels wide!",
             }),
             alt: z.string(),

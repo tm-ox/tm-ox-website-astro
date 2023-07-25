@@ -29,5 +29,5 @@ images:
     class: sm:col-span-4 sm:row-start-2
 url:
   prev: oxen-free
-  next: oxen-free
+  next: print
 ---

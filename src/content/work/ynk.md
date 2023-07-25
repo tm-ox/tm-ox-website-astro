@@ -7,27 +7,27 @@ tools: Vue/Nuxt3, Nuxt Content, Tailwindcss, AlpineJs
 website: yesnoklub.net
 link: https://yesnoklub.net
 description: Website for music event organisation Yes No Klub.
-cover: { src: ./ynk/ynk-web-dark-images.png, alt: Yes No Klub Website }
+cover: { src: ./ynk/ynk-web-dark-mobile.png, alt: Yes No Klub Website }
 images:
-  - src: ./mod/mod-logo-min.png
-    alt: Symbol
-    class: sm:col-span-4
-  - src: ./mod/mod-logo-max.png
-    alt: Sticker
-    class: sm:col-span-4
-  - src: ./mod/mod-bc-front.png
-    alt: Business card - front
-    class: sm:col-span-4 sm:mt-auto
-  - src: ./mod/mod-bc-back.png
-    alt: Business card - back
-    class: sm:col-span-4 sm:col-start-9
-  - src: ./mod/mod-igfeed.png
-    alt: Instagram feed
-    class: sm:col-span-4 sm:row-start-2
-  - src: ./mod/mod-igstory.png
-    alt: Instagram STORY
-    class: sm:col-span-4 sm:row-start-2
+  - src: ./ynk/ynk-web-dark-home.png
+    alt: Home - dark
+    class: col-span-2 sm:col-span-6
+  - src: ./ynk/ynk-web-light-home.png
+    alt: Home - light
+    class: col-span-2 sm:col-span-6
+  - src: ./ynk/ynk-web-dark-about.png
+    alt: About - dark
+    class: col-span-2 sm:col-span-12
+  - src: ./ynk/ynk-web-dark-images.png
+    alt: Images - dark
+    class: col-span-2 sm:col-span-6 lg:col-span-8
+  - src: ./ynk/ynk-web-light-mobile.png
+    alt: Mobile - light
+    class: col-span-1 sm:col-span-3 lg:col-span-2
+  - src: ./ynk/ynk-web-dark-mobile.png
+    alt: Mobile - dark
+    class: col-span-1 sm:col-span-3 lg:col-span-2
 url:
-  prev: oxen-free
-  next: oxen-free
+  prev: logos
+  next: fredst
 ---

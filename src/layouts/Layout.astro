@@ -1,8 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 const { title } = Astro.props;
+import Fade from "../components/Fade.astro";
 ---
 
 <html lang="en">
@@ -12,9 +11,10 @@ const { title } = Astro.props;
         <BaseHead title={title} />
     </head>
     <body>
-        <main>
-            <slot />
-        </main>
-        <Footer />
+        <Fade>
+            <main>
+                <slot />
+            </main>
+        </Fade>
     </body>
 </html>

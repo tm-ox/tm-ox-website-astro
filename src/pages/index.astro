@@ -7,6 +7,7 @@ import { Icon } from "astro-icon";
 import { Image } from "astro:assets";
 import Contact from "../components/Contact.astro";
 import { getCollection } from "astro:content";
+import Fade from "../components/Fade.astro";
 
 const work = await getCollection("work");
 work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
@@ -17,17 +18,25 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 	<section id="home">
 		<p class="section-title">TM.OX</p>
 		<a href="/#work" class="container hover:text-primary">
-			<Home />
-			<Icon
-				name="ion:md-arrow-dropdown-circle"
-				class="icon text-secondary -ml-1 mt-6 animate-bounce-slow"
-			/>
+			<Fade>
+				<Home />
+				<Icon
+					name="ion:md-arrow-dropdown-circle"
+					class="icon text-secondary mt-6 animate-bounce-slow ml-auto"
+				/>
+			</Fade>
 		</a>
 	</section>
 	<TabNav class="sticky top-6 z-50" />
 	<section id="work">
 		<p class="section-title">Selected Work</p>
 		<div class="container">
+			<a href="/#home">
+				<Icon
+					name="ion:md-arrow-dropup-circle"
+					class="icon text-secondary mb-4 animate-bounce-slow ml-auto"
+				/>
+			</a>
 			<div
 				class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-4"
 			>
@@ -37,16 +46,18 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 							href={`/work/${work.slug}`}
 							class="rounded-md shadow-md"
 						>
-							<Image
-								src={work.data.cover.src}
-								alt={work.data.cover.alt}
-								class="rounded-b-none bg-secondary object-none aspect-square"
-							/>
-							<div class="box">
-								<strong>{work.data.client}</strong>
-								<br />
-								{work.data.type}
-							</div>
+							<Fade>
+								<Image
+									src={work.data.cover.src}
+									alt={work.data.cover.alt}
+									class="rounded-b-none bg-secondary object-none aspect-square"
+								/>
+								<div class="box">
+									<strong>{work.data.client}</strong>
+									<br />
+									{work.data.type}
+								</div>
+							</Fade>
 						</a>
 					))
 				}
@@ -54,7 +65,7 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 			<a href="/#contact">
 				<Icon
 					name="ion:md-arrow-dropdown-circle"
-					class="icon text-secondary -ml-1 mt-6 animate-bounce-slow"
+					class="icon text-secondary mt-6 animate-bounce-slow ml-auto"
 				/>
 			</a>
 		</div>
@@ -64,11 +75,13 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 		<a href="/#work">
 			<Icon
 				name="ion:md-arrow-dropup-circle"
-				class="icon text-secondary -ml-1 mb-6 animate-bounce-slow"
+				class="icon text-secondary mb-6 animate-bounce-slow ml-auto"
 			/>
 		</a>
 		<div class="container flex justify-center">
-			<Contact />
+			<Fade>
+				<Contact />
+			</Fade>
 		</div>
 	</section>
 </Layout>

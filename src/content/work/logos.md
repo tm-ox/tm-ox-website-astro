@@ -28,6 +28,6 @@ images:
     alt: Instagram STORY
     class: sm:col-span-4 sm:row-start-2
 url:
-  prev: oxen-free
-  next: oxen-free
+  prev: print
+  next: ynk
 ---

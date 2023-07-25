@@ -6,7 +6,7 @@
 
 @layer base {
   html {
-    @apply mx-auto font-jakarta tracking-wide;
+    @apply mx-auto font-jakarta tracking-wide mb-12;
   }
   body {
     @apply bg-background text-primary w-[95%] max-w-screen-xl mx-auto relative overflow-y-auto;

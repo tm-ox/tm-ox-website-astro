@@ -1,17 +1,20 @@
 ---
 import { Image } from "astro:assets";
+import Fade from "./Fade.astro";
 
 const { index, src, alt, cls } = Astro.props;
 ---
 
 <label for={`lightbox-${index}`} class={`${cls} lightbox-label`}>
     <div class="rounded-md shadow-md">
-        <Image
-            src={src}
-            alt={alt}
-            class={`${cls} cursor-pointer rounded-b-none`}
-        />
-        <div class="box"><strong>{alt}</strong></div>
+        <Fade>
+            <Image
+                src={src}
+                alt={alt}
+                class={`${cls} cursor-pointer rounded-b-none `}
+            />
+            <div class="box"><strong>{alt}</strong></div>
+        </Fade>
     </div>
 </label>
 <input
@@ -19,7 +22,7 @@ const { index, src, alt, cls } = Astro.props;
     id={`lightbox-${index}`}
     class="lightbox-toggle hidden"
 />
-<div class="lightbox-overlay hidden">
+<div class="lightbox-overlay hidden z-50">
     <label for={`lightbox-${index}`} class="lightbox-close">&#x2715;</label>
     <Image src={src} alt={alt} class={`${cls} w-auto`} />
     <div class="box bg-opacity-0 text-primary text-center mt-2">
@@ -29,7 +32,7 @@ const { index, src, alt, cls } = Astro.props;
 
 <style>
     .lightbox-toggle:checked + .lightbox-overlay {
-        @apply block fixed overflow-hidden top-0 left-0 w-[100vw] h-[100vh] z-50 bg-background bg-opacity-90 backdrop-blur-xl text-center;
+        @apply block fixed overflow-hidden top-0 left-0 w-[100vw] h-[100vh]  bg-background bg-opacity-90 backdrop-blur-xl text-center;
     }
     .lightbox-toggle:checked + .lightbox-overlay img {
         @apply max-h-[90vh] max-w-[90vw] mt-10;

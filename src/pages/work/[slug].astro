@@ -5,6 +5,7 @@ import { getCollection } from "astro:content";
 import LightBox from "../../components/LightBox.astro";
 import TabNav from "../../components/TabNav.astro";
 import { Icon } from "astro-icon";
+import Fade from "../../components/Fade.astro";
 
 export async function getStaticPaths() {
 	const collection = await getCollection("work");
@@ -25,7 +26,7 @@ const { page } = Astro.props;
 	<Header>
 		<p class="section-title sm:ml-0">TM.OX</p>
 	</Header>
-	<div class="sticky right-0 top-[30px]">
+	<div class="sticky right-0 top-[30px] z-40">
 		<TabNav>
 			<a
 				slot="prev"
@@ -43,17 +44,24 @@ const { page } = Astro.props;
 			</a>
 		</TabNav>
 	</div>
-	<div class="mt-20 sm:mt-12">
-		<p>Client:<strong class="ml-1">{page.data.client}</strong></p>
-		<p>Type:<strong class="ml-1">{page.data.type}</strong></p>
-		<p>Tools:<strong class="ml-1">{page.data.tools}</strong></p>
-		<p>
-			Website:<a href={page.data.link} target="_blank"
-				><strong class="ml-1">{page.data.website}</strong></a
-			>
-		</p>
-		<p>{page.data.description}</p>
-	</div>
+	<Fade>
+		<div class="mt-20 sm:mt-12">
+			<p>Client:<strong class="ml-1">{page.data.client}</strong></p>
+			<p>Type:<strong class="ml-1">{page.data.type}</strong></p>
+			<p>Tools:<strong class="ml-1">{page.data.tools}</strong></p>
+			{
+				page.data.client !== "Various" && (
+					<p>
+						Website:
+						<a href={page.data.link} target="_blank">
+							<strong class="ml-1">{page.data.website}</strong>
+						</a>
+					</p>
+				)
+			}
+			<p>{page.data.description}</p>
+		</div>
+	</Fade>
 	<div class="grid grid-cols-1 sm:grid-cols-12 gap-3 sm:gap-4 mt-4">
 		{
 			page.data.images.flatMap((image: any, index: any) => (
