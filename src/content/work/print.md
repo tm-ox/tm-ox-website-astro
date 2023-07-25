@@ -17,10 +17,10 @@ images:
     class: col-span-1 sm:col-span-4 md:col-span-4 lg:col-span-3
   - src: ./print/db-flyer-back.png
     alt: Caravan park flyer - back
-    class: col-span-1 sm:col-span-4 md:col-span-4 lg:col-span-3
+    class: col-span-1 sm:col-span-4 sm:row-span-2 md:col-span-4 lg:row-span-1 lg:col-span-3
   - src: ./print/dotd-flyer.png
     alt: Event flyer
-    class: col-span-2 sm:col-span-8 md:col-span-8 md:row-start-3 lg:col-span-6 lg:row-span-2
+    class: col-span-2 sm:col-span-8 sm:row-start-3 md:col-span-8 md:row-start-3 lg:col-span-6 lg:row-span-2
   - src: ./print/warrlja-front.png
     alt: Indigenous tours flyer - front
     class: col-span-2 sm:col-span-8 lg:col-span-6 lg:row-start-2 lg:col-start-7

@@ -6,10 +6,10 @@
 
 @layer base {
   html {
-    @apply mx-auto font-jakarta tracking-wide mb-12;
+    @apply mx-auto font-jakarta tracking-wide mb-24;
   }
   body {
-    @apply bg-background text-primary w-[95%] max-w-screen-xl mx-auto relative overflow-y-auto;
+    @apply bg-background text-primary w-[95%] max-w-screen-xl mx-auto relative overflow-x-hidden;
   }
   header {
     @apply flex gap-[12px] fixed top-[30px] w-[95%];
@@ -18,10 +18,10 @@
     @apply flex flex-col justify-center min-h-screen w-full;
   }
   h1 {
-    @apply font-extrabold text-4xl md:text-5xl xl:text-6xl text-left sm:leading-[45px] md:leading-[60px] xl:leading-[68px] mb-4;
+    @apply font-extrabold text-4xl md:text-6xl xl:text-7xl text-left sm:leading-[45px] md:leading-[68px] xl:leading-[76px] mb-4;
   }
   h2 {
-    @apply font-extralight text-xl;
+    @apply font-extralight text-sm sm:text-base md:text-lg lg:text-xl;
   }
   p {
     @apply font-light text-left text-sm leading-relaxed w-full;
@@ -47,14 +47,14 @@
   .active .icon {
     @apply fill-primary;
   }
+  .arrow {
+    @apply text-secondary animate-bounce-slow mx-auto sm:ml-auto sm:mr-0;
+  }
   .section-title {
     @apply sticky top-[33px] sm:top-[30px]
 		w-fit ml-auto sm:ml-12 xl:ml-12 sm:mr-auto 
 		text-base font-bold uppercase tracking-wide
 		flex items-center h-7 sm:h-9 mb-auto z-50;
-  }
-  .container {
-    @apply mb-auto;
   }
   .box {
     @apply font-medium text-xs text-background uppercase bg-primary rounded-b-md px-2 py-1;

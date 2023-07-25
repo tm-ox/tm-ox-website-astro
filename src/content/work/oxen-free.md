@@ -7,29 +7,29 @@ tools: Adobe Illustrator
 website: oxenfree.net
 link: https://oxenfree.net
 description: Visual identity and selected collateral for Yogyakartan bar & kitchen.
-cover: { src: ./oxen-free/ox-igstory-ayash2.png, alt: Oxen Free Minimal Logo }
+cover: { src: ./oxen-free/ox-igfeed-ayash2.png, alt: Oxen Free Minimal Logo }
 images:
   - src: ./oxen-free/ox-logo-min.png
     alt: Minimal Logo
-    class: sm:col-span-4
+    class: col-span-2 sm:col-span-6 lg:col-span-4 lg:mt-auto
   - src: ./oxen-free/ox-logo-max.png
     alt: Maximal Logo
-    class: sm:col-span-4
+    class: col-span-2 sm:col-span-6 lg:col-span-4 lg:mt-auto
   - src: ./oxen-free/ox-type.png
     alt: Typeface
-    class: sm:col-span-8 sm:row-start-2 sm:row-span-2
+    class: col-span-2 sm:col-span-12 lg:col-span-8 lg:row-start-2 lg:row-span-2 lg:col-start-1
   - src: ./oxen-free/ox-member-front.png
     alt: Membership card - front
-    class: sm:col-span-4 sm:mt-auto
+    class: col-span-2 sm:col-span-6 lg:col-span-4 lg:mt-auto
   - src: ./oxen-free/ox-member-back.png
     alt: Membership card - back
-    class: sm:col-span-4
+    class: col-span-2 sm:col-span-6 lg:col-span-4 lg:row-start-2
   - src: ./oxen-free/ox-igfeed-ayash2.png
     alt: Instagram feed
-    class: sm:col-start-5 sm:col-span-4
+    class: col-span-2 sm:col-span-6 lg:col-span-4 lg:row-start-4 lg:col-start-5 lg:row-span-2
   - src: ./oxen-free/ox-igstory-ayash2.png
     alt: Instagram story
-    class: sm:col-start-9 sm:row-start-3 sm:col-span-4 sm:row-span-2
+    class: col-span-2 sm:col-span-6 lg:col-span-4 lg:row-start-3 lg:col-start-9 lg:row-span-2
 url:
   prev: mod
   next: mod

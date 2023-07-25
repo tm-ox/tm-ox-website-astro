@@ -15,70 +15,56 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 
 <Layout title="TM.OX">
 	<Header />
+	<!-- HI -->
 	<section id="home">
 		<p class="section-title">TM.OX</p>
-		<a href="/#work" class="container hover:text-primary">
+		<a href="/#work" class="hover:text-primary mb-auto">
 			<Fade>
 				<Home />
-				<Icon
-					name="ion:md-arrow-dropdown-circle"
-					class="icon text-secondary mt-6 animate-bounce-slow ml-auto"
-				/>
 			</Fade>
+			<Icon name="ion:md-arrow-dropdown-circle" class="icon arrow mt-5" />
 		</a>
 	</section>
+	<!-- WORK -->
 	<TabNav class="sticky top-6 z-50" />
 	<section id="work">
 		<p class="section-title">Selected Work</p>
-		<div class="container">
-			<a href="/#home">
-				<Icon
-					name="ion:md-arrow-dropup-circle"
-					class="icon text-secondary mb-4 animate-bounce-slow ml-auto"
-				/>
-			</a>
-			<div
-				class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-4"
-			>
-				{
-					work.map((work) => (
-						<a
-							href={`/work/${work.slug}`}
-							class="rounded-md shadow-md"
-						>
-							<Fade>
-								<Image
-									src={work.data.cover.src}
-									alt={work.data.cover.alt}
-									class="rounded-b-none bg-secondary object-none aspect-square"
-								/>
-								<div class="box">
-									<strong>{work.data.client}</strong>
-									<br />
-									{work.data.type}
-								</div>
-							</Fade>
-						</a>
-					))
-				}
-			</div>
-			<a href="/#contact">
-				<Icon
-					name="ion:md-arrow-dropdown-circle"
-					class="icon text-secondary mt-6 animate-bounce-slow ml-auto"
-				/>
-			</a>
+		<a href="/#home">
+			<Icon name="ion:md-arrow-dropup-circle" class="icon arrow" />
+		</a>
+		<div
+			class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 mt-4"
+		>
+			{
+				work.map((work) => (
+					<a href={`/work/${work.slug}`} class="rounded-md shadow-md">
+						<Fade>
+							<Image
+								src={work.data.cover.src}
+								alt={work.data.cover.alt}
+								class="rounded-b-none bg-secondary object-none aspect-square"
+							/>
+							<div class="box">
+								<strong>{work.data.client}</strong>
+								<br />
+								{work.data.type}
+							</div>
+						</Fade>
+					</a>
+				))
+			}
 		</div>
+		<a href="/#contact" class="mb-auto">
+			<Icon name="ion:md-arrow-dropdown-circle" class="icon arrow mt-5" />
+		</a>
 	</section>
+	<!-- CONTACT -->
 	<section id="contact">
 		<p class="section-title">Contact</p>
 		<a href="/#work">
-			<Icon
-				name="ion:md-arrow-dropup-circle"
-				class="icon text-secondary mb-6 animate-bounce-slow ml-auto"
-			/>
+			<Icon name="ion:md-arrow-dropup-circle" class="icon arrow mb-4" />
 		</a>
-		<div class="container flex justify-center">
+		<div class="mb-auto">
 			<Fade>
 				<Contact />
 			</Fade>
