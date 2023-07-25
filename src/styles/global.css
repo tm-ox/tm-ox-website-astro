@@ -6,13 +6,13 @@
 
 @layer base {
   html {
-    @apply mx-auto p-6 font-jakarta tracking-wide;
+    @apply mx-auto font-jakarta tracking-wide;
   }
   body {
-    @apply bg-background text-primary max-w-screen-xl mx-auto relative overflow-y-auto;
+    @apply bg-background text-primary w-[95%] max-w-screen-xl mx-auto relative overflow-y-auto;
   }
   header {
-    @apply flex fixed top-[30px];
+    @apply flex gap-[12px] fixed top-[30px] w-[95%];
   }
   section {
     @apply flex flex-col justify-center min-h-screen w-full;
@@ -48,7 +48,7 @@
     @apply fill-primary;
   }
   .section-title {
-    @apply sticky top-[30px]
+    @apply sticky top-[33px] sm:top-[30px]
 		w-fit ml-auto sm:ml-12 xl:ml-12 sm:mr-auto 
 		text-base font-bold uppercase tracking-wide
 		flex items-center h-7 sm:h-9 mb-auto z-50;

@@ -7,7 +7,7 @@ tools: Adobe Illustrator
 website: oxenfree.net
 link: https://oxenfree.net
 description: Visual identity and selected collateral for Yogyakartan bar & kitchen.
-cover: { src: ./oxen-free/ox-logo-max.png, alt: Oxen Free Minimal Logo }
+cover: { src: ./oxen-free/ox-igstory-ayash2.png, alt: Oxen Free Minimal Logo }
 images:
   - src: ./oxen-free/ox-logo-min.png
     alt: Minimal Logo

@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
 import { getCollection } from "astro:content";
 import LightBox from "../../components/LightBox.astro";
 import TabNav from "../../components/TabNav.astro";
@@ -21,24 +22,28 @@ const { page } = Astro.props;
 ---
 
 <Layout title={`TM.OX - ${page.data.title}`}>
-	<p class="section-title fixed top-[30px]">TM.OX</p>
-	<TabNav>
-		<a
-			slot="prev"
-			href={`/work/${page.data.url.prev}`}
-			class="bg-secondary rounded-full p-2 sm:p-1 shadow-md z-50"
-		>
-			<Icon name="ion:md-arrow-dropleft-circle" class="icon" />
-		</a>
-		<a
-			slot="next"
-			href={`/work/${page.data.url.next}`}
-			class="bg-secondary rounded-full p-2 sm:p-1 shadow-md z-50"
-		>
-			<Icon name="ion:md-arrow-dropright-circle" class="icon" />
-		</a>
-	</TabNav>
-	<div class="mt-8">
+	<Header>
+		<p class="section-title sm:ml-0">TM.OX</p>
+	</Header>
+	<div class="sticky right-0 top-[30px]">
+		<TabNav>
+			<a
+				slot="prev"
+				href={`/work/${page.data.url.prev}`}
+				class="bg-secondary rounded-full p-2 sm:p-1 shadow-md z-50"
+			>
+				<Icon name="ion:md-arrow-dropleft-circle" class="icon" />
+			</a>
+			<a
+				slot="next"
+				href={`/work/${page.data.url.next}`}
+				class="bg-secondary rounded-full p-2 sm:p-1 shadow-md z-50"
+			>
+				<Icon name="ion:md-arrow-dropright-circle" class="icon" />
+			</a>
+		</TabNav>
+	</div>
+	<div class="mt-20 sm:mt-12">
 		<p>Client:<strong class="ml-1">{page.data.client}</strong></p>
 		<p>Type:<strong class="ml-1">{page.data.type}</strong></p>
 		<p>Tools:<strong class="ml-1">{page.data.tools}</strong></p>

@@ -5,7 +5,7 @@ const { index, src, alt, cls } = Astro.props;
 ---
 
 <label for={`lightbox-${index}`} class={`${cls} lightbox-label`}>
-    <div>
+    <div class="rounded-md shadow-md">
         <Image
             src={src}
             alt={alt}

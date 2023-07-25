@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import * as home from "../content/pages/home.md";
+import Header from "../components/Header.astro";
 import { Content as Home } from "../content/pages/home.md";
 import TabNav from "../components/TabNav.astro";
 import { Icon } from "astro-icon";
@@ -13,13 +13,14 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 ---
 
 <Layout title="TM.OX">
+	<Header />
 	<section id="home">
 		<p class="section-title">TM.OX</p>
 		<a href="/#work" class="container hover:text-primary">
 			<Home />
 			<Icon
 				name="ion:md-arrow-dropdown-circle"
-				class="icon text-hover -ml-1 mt-6 animate-bounce-slow"
+				class="icon text-secondary -ml-1 mt-6 animate-bounce-slow"
 			/>
 		</a>
 	</section>
@@ -27,17 +28,22 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 	<section id="work">
 		<p class="section-title">Selected Work</p>
 		<div class="container">
-			<div class="grid grid-cols-2 sm:grid-cols-5 gap-4 mt-4">
+			<div
+				class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-4"
+			>
 				{
 					work.map((work) => (
-						<a href={`/work/${work.slug}`}>
+						<a
+							href={`/work/${work.slug}`}
+							class="rounded-md shadow-md"
+						>
 							<Image
 								src={work.data.cover.src}
 								alt={work.data.cover.alt}
-								class="rounded-b-none"
+								class="rounded-b-none bg-secondary object-none aspect-square"
 							/>
 							<div class="box">
-								<strong>{work.data.title}</strong>
+								<strong>{work.data.client}</strong>
 								<br />
 								{work.data.type}
 							</div>
@@ -48,7 +54,7 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 			<a href="/#contact">
 				<Icon
 					name="ion:md-arrow-dropdown-circle"
-					class="icon text-hover -ml-1 mt-6 animate-bounce-slow"
+					class="icon text-secondary -ml-1 mt-6 animate-bounce-slow"
 				/>
 			</a>
 		</div>
@@ -58,7 +64,7 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 		<a href="/#work">
 			<Icon
 				name="ion:md-arrow-dropup-circle"
-				class="icon text-hover -ml-1 mt-6 animate-bounce-slow"
+				class="icon text-secondary -ml-1 mb-6 animate-bounce-slow"
 			/>
 		</a>
 		<div class="container flex justify-center">
