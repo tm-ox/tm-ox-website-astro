@@ -23,19 +23,23 @@ const { index, src, alt, cls } = Astro.props;
     class="lightbox-toggle hidden"
 />
 <div class="lightbox-overlay hidden z-50">
-    <label
-        for={`lightbox-${index}`}
-        class="text-primary hover:text-secondary text-4xl cursor-pointer mt-8 w-fit mx-auto"
-        >&#x2715;</label
-    >
-    <Image
-        src={src}
-        alt={alt}
-        class="h-fit max-h-[80vh] w-max max-w-[90vw] m-auto mt-auto"
-    />
-    <div class="box bg-opacity-0 text-primary mb-8">
-        <strong>{alt}</strong>
-    </div>
+    <Fade>
+        <div class="flex flex-col h-full justify-between bg-secondary">
+            <label
+                for={`lightbox-${index}`}
+                class="text-primary hover:text-secondary text-4xl cursor-pointer mt-8 w-fit mx-auto"
+                >&#x2715;</label
+            >
+            <Image
+                src={src}
+                alt={alt}
+                class="h-fit max-h-[80vh] w-max max-w-[90vw] m-auto"
+            />
+            <div class="box bg-opacity-0 text-primary mb-8">
+                <strong>{alt}</strong>
+            </div>
+        </div>
+    </Fade>
 </div>
 
 <style>

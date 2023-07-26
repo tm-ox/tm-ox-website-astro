@@ -2,10 +2,16 @@
 order: "07"
 title: Silvagenitus
 client: Silvagenitus
-type: Web Design
-tools: React/Next, Tailwindcss
 website: silvagenitus.com
 link: https://silvagenitus.com
+type: Web Design
+tools:
+  - icon: ../assets/next.png
+    name: React/Next,
+    link: https://nextjs.org
+  - icon: ../assets/tailwind.png
+    name: Tailwindcss
+    link: https://tailwindcss.com
 description: Visual identity and selected collateral for Yogyakartan cafe and bakery.
 cover: { src: ./silv/silv-web-about.png, alt: Silvagenitus Website }
 images:

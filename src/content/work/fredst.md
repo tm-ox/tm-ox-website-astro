@@ -2,10 +2,25 @@
 order: "06"
 title: Fred St.
 client: Fred St.
-type: Web Design
-tools: Vue/Nuxt3, Nuxt Content, Tailwindcss, AlpineJs, NetlifyCMS
 website: fredst.com
 link: https://fredst.com
+type: Web Design
+tools:
+  - icon: ../assets/nuxt.png
+    name: Vue/Nuxt3,
+    link: https://nuxt.com
+  - icon: ../assets/nuxt.png
+    name: Nuxt Content,
+    link: https://content.nuxtjs.org
+  - icon: ../assets/tailwind.png
+    name: Tailwindcss,
+    link: https://tailwindcss.com
+  - icon: ../assets/alpine.png
+    name: AlpineJs,
+    link: https://alpinejs.dev
+  - icon: ../assets/netlify.png
+    name: NetlifyCMS
+    link: https://v1.netlifycms.org
 description: Website for Australian landscape architecture firm.
 cover: { src: ./fredst/fredst-web-company-2.png, alt: Fred St. Website }
 images:

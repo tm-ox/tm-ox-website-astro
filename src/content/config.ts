@@ -7,10 +7,18 @@ export const collections = {
         order: z.string(),
         title: z.string(),
         client: z.string(),
-        type: z.string(),
-        tools: z.string(),
         website: z.string().optional(),
         link: z.string().optional(),
+        type: z.string(),
+        tools: z.array(
+          z.object({
+            icon: image().refine((img) => img.width >= 100, {
+              message: "Image must be at least 100 pixels wide!",
+            }).optional(),
+            name: z.string(),
+            link: z.string().optional(),
+          })
+        ), 
         description: z.string().optional(),
         cover: z.object({
           src: image().refine((img) => img.width >= 300, {

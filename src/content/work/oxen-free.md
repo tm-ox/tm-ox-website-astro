@@ -2,10 +2,16 @@
 order: "01"
 title: Oxen Free
 client: Oxen Free
-type: Identity Design
-tools: Adobe Illustrator
 website: oxenfree.net
 link: https://oxenfree.net
+type: Identity Design
+tools:
+  - icon: ../assets/ai.png
+    name: Adobe Illustrator,
+    link: https://www.adobe.com/products/illustrator.html
+  - icon: ../assets/id.png
+    name: Adobe Indesign
+    link: https://www.adobe.com/products/indesign.html
 description: Visual identity and selected collateral for Yogyakartan bar & kitchen.
 cover: { src: ./oxen-free/ox-igfeed-ayash2.png, alt: Oxen Free Minimal Logo }
 images:

@@ -2,10 +2,16 @@
 order: "02"
 title: Mrs O'Donoghue
 client: Mrs O'Donoghue
-type: Identity Design
-tools: Adobe Illustrator
 website: mrsodonoghue.netlify.app
 link: https://mrsodonoghue.netlify.app
+type: Identity Design
+tools:
+  - icon: ../assets/ai.png
+    name: Adobe Illustrator,
+    link: https://www.adobe.com/products/illustrator.html
+  - icon: ../assets/id.png
+    name: Adobe Indesign
+    link: https://www.adobe.com/products/indesign.html
 description: Visual identity and selected collateral for Yogyakartan cafe and bakery.
 cover: { src: ./mod/mod-logo-min.png, alt: Oxen Free Minimal Logo }
 images:

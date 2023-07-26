@@ -2,10 +2,13 @@
 order: "04"
 title: Logo Design
 client: Various
-type: Logo Design
-tools: Adobe Illustrator
 website: ""
 link: ""
+type: Logo Design
+tools:
+  - icon: ../assets/ai.png
+    name: Adobe Illustrator
+    link: https://www.adobe.com/products/illustrator.html
 description: Various logo designs.
 cover: { src: ./logos/lupa.png, alt: Lupa Logo }
 images:

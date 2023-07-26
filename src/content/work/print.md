@@ -2,10 +2,16 @@
 order: "03"
 title: Print Design
 client: Various
-type: Print Design
-tools: Adobe Illustrator, Adobe Indesign
 website: ""
 link: ""
+type: Print Design
+tools:
+  - icon: ../assets/ai.png
+    name: Adobe Illustrator,
+    link: https://www.adobe.com/products/illustrator.html
+  - icon: ../assets/id.png
+    name: Adobe Indesign
+    link: https://www.adobe.com/products/indesign.html
 description: Various print designs.
 cover: { src: ./print//OX_UnKwn03.jpg, alt: Oxen Free Minimal Logo }
 images:

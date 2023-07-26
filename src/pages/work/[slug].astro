@@ -4,6 +4,7 @@ import Header from "../../components/Header.astro";
 import { getCollection } from "astro:content";
 import LightBox from "../../components/LightBox.astro";
 import TabNav from "../../components/TabNav.astro";
+import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
 import Fade from "../../components/Fade.astro";
 
@@ -47,8 +48,6 @@ const { page } = Astro.props;
 	<Fade>
 		<div class="mt-20 sm:mt-12">
 			<p>Client:<strong class="ml-1">{page.data.client}</strong></p>
-			<p>Type:<strong class="ml-1">{page.data.type}</strong></p>
-			<p>Tools:<strong class="ml-1">{page.data.tools}</strong></p>
 			{
 				page.data.client !== "Various" && (
 					<p>
@@ -59,7 +58,29 @@ const { page } = Astro.props;
 					</p>
 				)
 			}
-			<p>{page.data.description}</p>
+			<p>Type:<strong class="ml-1">{page.data.type}</strong></p>
+			<div class="flex flex-wrap">
+				<p class="mr-1 w-fit">Tools:</p>
+				{
+					page.data.tools.flatMap((tools: any) => (
+						<a
+							href={tools.link}
+							target="_blank"
+							class="flex justify-center"
+						>
+							<Image
+								src={tools.icon}
+								alt={tools.name}
+								class="h-3 rounded-none my-auto w-auto mr-1"
+							/>
+							<p>
+								<strong class="mr-1">{tools.name}</strong>
+							</p>
+						</a>
+					))
+				}
+			</div>
+			<h2 class="mt-2 text-left lg:text-lg">{page.data.description}</h2>
 		</div>
 	</Fade>
 	<div class="grid grid-cols-2 sm:grid-cols-12 gap-3 sm:gap-4 mt-4">

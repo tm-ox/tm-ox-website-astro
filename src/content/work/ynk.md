@@ -2,10 +2,25 @@
 order: "05"
 title: Yes No Klub - Website
 client: Yes No Klub
-type: Web Design
-tools: Vue/Nuxt3, Nuxt Content, Tailwindcss, AlpineJs
 website: yesnoklub.net
 link: https://yesnoklub.net
+type: Web Design
+tools:
+  - icon: ../assets/nuxt.png
+    name: Vue/Nuxt3,
+    link: https://nuxt.com
+  - icon: ../assets/nuxt.png
+    name: Nuxt Content,
+    link: https://content.nuxtjs.org
+  - icon: ../assets/tailwind.png
+    name: Tailwindcss,
+    link: https://tailwindcss.com
+  - icon: ../assets/alpine.png
+    name: AlpineJs,
+    link: https://alpinejs.dev
+  - icon: ../assets/netlify.png
+    name: NetlifyCMS
+    link: https://v1.netlifycms.org
 description: Website for music event organisation Yes No Klub.
 cover: { src: ./ynk/ynk-web-dark-mobile.png, alt: Yes No Klub Website }
 images:
