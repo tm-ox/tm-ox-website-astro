@@ -1,8 +1,16 @@
 ---
 title: Home
 description: Description
-section1:
-  title: all rounded.. designer, desk monkey.. willing, able & online.
+tools:
+  - icon: /src/content/assets/astro.png
+    name: Astro,
+    link: https://astro.build
+  - icon: /src/content/assets/tailwind.png
+    name: Tailwindcss,
+    link: https://tailwindcss.com
+  - icon: /src/content/assets/alpine.png
+    name: AlpineJs
+    link: https://alpinejs.dev
 ---
 
 # all rounded..

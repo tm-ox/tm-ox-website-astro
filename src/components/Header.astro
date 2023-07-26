@@ -2,24 +2,6 @@
 import Logo from "./Logo.astro";
 ---
 
-<header class="z-40">
+<header>
     <a href="/"><Logo /></a>
-    <slot />
 </header>
-
-<script>
-    const { pathname } = window.location;
-    const activeNavigationElement = document.querySelector(
-        `nav a[href="${pathname}"]`
-    );
-
-    if (activeNavigationElement) {
-        activeNavigationElement.classList.add("active");
-    }
-</script>
-
-<style>
-    a.active {
-        @apply bg-secondary hidden;
-    }
-</style>

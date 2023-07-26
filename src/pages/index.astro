@@ -14,12 +14,11 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 ---
 
 <Layout title="TM.OX">
-	<Header />
 	<!-- HI -->
 	<section id="home">
 		<p class="section-title">TM.OX</p>
 		<a href="/#work" class="hover:text-primary mb-auto">
-			<Fade>
+			<Fade origin="sm:origin-top-left">
 				<Home />
 			</Fade>
 			<Icon
@@ -40,8 +39,11 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 		>
 			{
 				work.map((work) => (
-					<a href={`/work/${work.slug}`} class="rounded-md shadow-md">
-						<Fade>
+					<Fade>
+						<a
+							href={`/work/${work.slug}`}
+							class="rounded-md shadow-md"
+						>
 							<Image
 								src={work.data.cover.src}
 								alt={work.data.cover.alt}
@@ -52,8 +54,8 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 								<br />
 								{work.data.type}
 							</div>
-						</Fade>
-					</a>
+						</a>
+					</Fade>
 				))
 			}
 		</div>

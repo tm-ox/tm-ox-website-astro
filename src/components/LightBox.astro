@@ -6,16 +6,16 @@ const { index, src, alt, cls } = Astro.props;
 ---
 
 <label for={`lightbox-${index}`} class={`${cls} lightbox-label`}>
-    <div class="rounded-md shadow-md">
-        <Fade>
+    <Fade origin="origin-center">
+        <div class="rounded-md shadow-md">
             <Image
                 src={src}
                 alt={alt}
                 class={`${cls} cursor-pointer rounded-b-none bg-secondary`}
             />
             <div class="box"><strong>{alt}</strong></div>
-        </Fade>
-    </div>
+        </div>
+    </Fade>
 </label>
 <input
     type="checkbox"
@@ -23,8 +23,10 @@ const { index, src, alt, cls } = Astro.props;
     class="lightbox-toggle hidden"
 />
 <div class="lightbox-overlay hidden z-50">
-    <Fade>
-        <div class="flex flex-col h-full justify-between bg-secondary">
+    <div
+        class="flex flex-col h-full justify-between bg-background bg-opacity-90 backdrop-blur-xl"
+    >
+        <Fade class="mt-44">
             <label
                 for={`lightbox-${index}`}
                 class="text-primary hover:text-secondary text-4xl cursor-pointer mt-8 w-fit mx-auto"
@@ -38,12 +40,12 @@ const { index, src, alt, cls } = Astro.props;
             <div class="box bg-opacity-0 text-primary mb-8">
                 <strong>{alt}</strong>
             </div>
-        </div>
-    </Fade>
+        </Fade>
+    </div>
 </div>
 
 <style>
     .lightbox-toggle:checked + .lightbox-overlay {
-        @apply flex flex-col fixed overflow-hidden top-0 left-0 w-[100vw] h-[100vh] bg-background bg-opacity-90 backdrop-blur-xl text-center;
+        @apply flex flex-col fixed overflow-hidden top-0 left-0 w-[100vw] h-[100vh] text-center;
     }
 </style>

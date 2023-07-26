@@ -37,6 +37,6 @@ images:
     alt: Instagram story
     class: col-span-2 sm:col-span-6 lg:col-span-4 lg:row-start-3 lg:col-start-9 lg:row-span-2
 url:
-  prev: mod
+  prev: silv
   next: mod
 ---

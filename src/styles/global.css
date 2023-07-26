@@ -6,13 +6,16 @@
 
 @layer base {
   html {
-    @apply mx-auto font-jakarta tracking-wide mb-24;
+    @apply mx-auto font-jakarta tracking-wide;
   }
   body {
-    @apply bg-background text-primary w-[95%] max-w-screen-xl mx-auto relative overflow-x-hidden;
+    @apply bg-background text-primary overflow-x-hidden;
+  }
+  main {
+    @apply w-[95%] max-w-screen-xl mx-auto mb-24;
   }
   header {
-    @apply flex gap-[12px] fixed top-[30px] w-[95%];
+    @apply fixed top-[20px] sm:top-[30px] w-fit z-40;
   }
   section {
     @apply flex flex-col justify-center min-h-screen w-full;
@@ -51,10 +54,10 @@
     @apply fill-primary;
   }
   .arrow {
-    @apply text-secondary animate-bounce-slow mx-auto sm:mr-auto sm:-ml-2;
+    @apply text-secondary animate-bounce-slow mx-auto;
   }
   .section-title {
-    @apply sticky top-[33px] sm:top-[30px]
+    @apply sticky top-[20px] sm:top-[30px]
 		w-fit ml-auto sm:ml-12 xl:ml-12 sm:mr-auto 
 		text-base font-bold uppercase tracking-wide
 		flex items-center h-7 sm:h-9 mb-auto z-50;
