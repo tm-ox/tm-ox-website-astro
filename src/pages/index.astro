@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
 import { Content as Home } from "../content/pages/home.md";
 import TabNav from "../components/TabNav.astro";
 import { Icon } from "astro-icon";
@@ -13,69 +12,60 @@ const work = await getCollection("work");
 work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 ---
 
-<Layout title="TM.OX">
-	<!-- HI -->
-	<section id="home">
-		<p class="section-title">TM.OX</p>
-		<a href="/#work" class="hover:text-primary mb-auto">
-			<Fade origin="sm:origin-top-left">
-				<Home />
-			</Fade>
-			<Icon
-				name="ion:md-arrow-dropdown-circle"
-				class="icon arrow mt-10"
-			/>
-		</a>
-	</section>
-	<!-- WORK -->
-	<TabNav class="sticky top-6 z-50" />
-	<section id="work">
-		<p class="section-title">Selected Work</p>
-		<a href="/#home">
-			<Icon name="ion:md-arrow-dropup-circle" class="icon arrow mb-5" />
-		</a>
-		<div
-			class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 mt-4"
-		>
-			{
-				work.map((work) => (
-					<Fade>
-						<a
-							href={`/work/${work.slug}`}
-							class="rounded-md shadow-md"
-						>
-							<Image
-								src={work.data.cover.src}
-								alt={work.data.cover.alt}
-								class="rounded-b-none bg-secondary object-none aspect-square"
-							/>
-							<div class="box">
-								<strong>{work.data.client}</strong>
-								<br />
-								{work.data.type}
-							</div>
-						</a>
-					</Fade>
-				))
-			}
-		</div>
-		<a href="/#contact" class="mb-auto">
-			<Icon
-				name="ion:md-arrow-dropdown-circle"
-				class="icon arrow mt-10"
-			/>
-		</a>
-	</section>
-	<!-- CONTACT -->
-	<section id="contact">
-		<p class="section-title">Contact</p>
-		<a href="/#work">
-			<Icon name="ion:md-arrow-dropup-circle" class="icon arrow mb-5" />
-		</a>
-		<div class="mb-auto">
-			<Fade>
-				<Contact />
-			</Fade>
-		</div>
-	</section>
+<Layout title="TM.OX" description="Design Portfolio">
+  <!-- HI -->
+  <section id="home">
+    <p class="section-title">TM.OX</p>
+    <a href="/#work" class="hover:text-primary mb-auto">
+      <Fade origin="sm:origin-top-left">
+        <Home />
+      </Fade>
+      <Icon name="ion:md-arrow-dropdown-circle" class="icon arrow mt-10" />
+    </a>
+  </section>
+  <!-- WORK -->
+  <TabNav class="sticky top-6 z-50" />
+  <section id="work">
+    <p class="section-title">Selected Work</p>
+    <a href="/#home">
+      <Icon name="ion:md-arrow-dropup-circle" class="icon arrow mb-5" />
+    </a>
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 mt-4"
+    >
+      {
+        work.map((work) => (
+          <Fade>
+            <a href={`/work/${work.slug}`} class="rounded-md shadow-md">
+              <Image
+                src={work.data.cover.src}
+                alt={work.data.cover.alt}
+                class="rounded-b-none bg-secondary object-none aspect-square"
+              />
+              <div class="box">
+                <strong>{work.data.client}</strong>
+                <br />
+                {work.data.type}
+              </div>
+            </a>
+          </Fade>
+        ))
+      }
+    </div>
+    <a href="/#contact" class="mb-auto">
+      <Icon name="ion:md-arrow-dropdown-circle" class="icon arrow mt-10" />
+    </a>
+  </section>
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-title">Contact</p>
+    <a href="/#work">
+      <Icon name="ion:md-arrow-dropup-circle" class="icon arrow mb-5" />
+    </a>
+    <div class="mb-auto">
+      <Fade>
+        <Contact />
+      </Fade>
+    </div>
+  </section>
 </Layout>

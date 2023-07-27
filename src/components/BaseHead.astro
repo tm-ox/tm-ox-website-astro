@@ -1,19 +1,32 @@
 ---
 import "../styles/global.css";
+import { GoogleAnalytics } from "astro-google-analytics";
 
-const { title, description } = Astro.props;
+const { title, description = "" } = Astro.props;
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<meta name="generator" content={Astro.generator} />
+<meta name="viewport" content="width=device-width" />
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
-<meta name="description" content={description} />
+{description && <meta name="description" content={description} />}
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+{description && <meta property="og:description" content={description} />}
+<!-- Twitter -->
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:title" content={title} />
+{description && <meta property="twitter:description" content={description} />}
+
+<GoogleAnalytics id="G-V24HSVJPKE" />
+
 <script
-    defer
-    src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+  defer
+  src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
 ></script>
