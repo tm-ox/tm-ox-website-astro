@@ -1,6 +1,5 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Header from "../../components/Header.astro";
 import { getCollection } from "astro:content";
 import LightBox from "../../components/LightBox.astro";
 import TabNav from "../../components/TabNav.astro";
@@ -9,92 +8,86 @@ import { Icon } from "astro-icon";
 import Fade from "../../components/Fade.astro";
 
 export async function getStaticPaths() {
-	const collection = await getCollection("work");
-	return collection.map((page) => ({
-		params: { slug: page.slug },
-		props: { page },
-	}));
+  const collection = await getCollection("work");
+  return collection.map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
 }
 export async function getStaticProps({ params }: any) {
-	const project = await getCollection("work");
-	const page = project.find((p) => p.slug === params.slug);
-	return { props: { page } };
+  const project = await getCollection("work");
+  const page = project.find((p) => p.slug === params.slug);
+  return { props: { page } };
 }
 const { page } = Astro.props;
 ---
 
 <Layout title={`TM.OX - ${page.data.title}`}>
-	<p class="section-title">TM.OX</p>
-	<div class="sm:-mt-2">
-		<TabNav>
-			<a
-				slot="prev"
-				href={`/work/${page.data.url.prev}`}
-				class="bg-secondary rounded-full p-2 sm:p-1 shadow-md z-50"
-			>
-				<Icon name="ion:md-arrow-dropleft-circle" class="icon" />
-			</a>
-			<a
-				slot="next"
-				href={`/work/${page.data.url.next}`}
-				class="bg-secondary rounded-full p-2 sm:p-1 shadow-md z-50"
-			>
-				<Icon name="ion:md-arrow-dropright-circle" class="icon" />
-			</a>
-		</TabNav>
-		<Fade origin="origin-top-left">
-			<div class="mt-12 sm:mt-7">
-				<p>Client:<strong class="ml-1">{page.data.client}</strong></p>
-				{
-					page.data.client !== "Various" && (
-						<p>
-							Website:
-							<a href={page.data.link} target="_blank">
-								<strong class="ml-1">
-									{page.data.website}
-								</strong>
-							</a>
-						</p>
-					)
-				}
-				<p>Type:<strong class="ml-1">{page.data.type}</strong></p>
-				<div class="flex flex-wrap">
-					<p class="mr-1 w-fit">Tools:</p>
-					{
-						page.data.tools.flatMap((tools: any) => (
-							<a
-								href={tools.link}
-								target="_blank"
-								class="flex justify-center"
-							>
-								<Image
-									src={tools.icon}
-									alt={tools.name}
-									class="h-3 rounded-none my-auto w-auto mr-1"
-								/>
-								<p>
-									<strong class="mr-1">{tools.name}</strong>
-								</p>
-							</a>
-						))
-					}
-				</div>
-				<h2 class="mt-2 text-left lg:text-lg">
-					{page.data.description}
-				</h2>
-			</div>
-		</Fade>
-		<div class="grid grid-cols-2 sm:grid-cols-12 gap-3 sm:gap-4 mt-4">
-			{
-				page.data.images.flatMap((image: any, index: any) => (
-					<LightBox
-						index={index}
-						src={image.src}
-						alt={image.alt}
-						cls={image.class}
-					/>
-				))
-			}
-		</div>
-	</div>
+  <p class="section-title">TM.OX</p>
+  <div class="sm:-mt-2">
+    <TabNav>
+      <a
+        slot="prev"
+        href={`/work/${page.data.url.prev}`}
+        class="bg-secondary rounded-full p-2 sm:p-1 shadow-md z-50"
+      >
+        <Icon name="ion:md-arrow-dropleft-circle" class="icon" />
+      </a>
+      <a
+        slot="next"
+        href={`/work/${page.data.url.next}`}
+        class="bg-secondary rounded-full p-2 sm:p-1 shadow-md z-50"
+      >
+        <Icon name="ion:md-arrow-dropright-circle" class="icon" />
+      </a>
+    </TabNav>
+    <Fade origin="origin-top-left">
+      <div class="mt-12 sm:mt-7">
+        <p>Client:<strong class="ml-1">{page.data.client}</strong></p>
+        {
+          page.data.client !== "Various" && (
+            <p>
+              Website:
+              <a href={page.data.link} target="_blank">
+                <strong class="ml-1">{page.data.website}</strong>
+              </a>
+            </p>
+          )
+        }
+        <p>Type:<strong class="ml-1">{page.data.type}</strong></p>
+        <div class="flex flex-wrap">
+          <p class="mr-1 w-fit">Tools:</p>
+          {
+            page.data.tools.flatMap((tools: any) => (
+              <a href={tools.link} target="_blank" class="flex justify-center">
+                <Image
+                  src={tools.icon}
+                  alt={tools.name}
+                  class="h-3 rounded-none my-auto w-auto mr-1"
+                />
+                <p>
+                  <strong class="mr-1">{tools.name}</strong>
+                </p>
+              </a>
+            ))
+          }
+        </div>
+        <h2 class="mt-2 text-left lg:text-lg">
+          {page.data.description}
+        </h2>
+      </div>
+    </Fade>
+    <div class="grid grid-cols-2 sm:grid-cols-12 gap-3 sm:gap-4 mt-4">
+      {
+        page.data.images.flatMap((image: any, index: any) => (
+          <LightBox
+            index={index}
+            src={image.src}
+            alt={image.alt}
+            cls={image.class}
+          />
+        ))
+      }
+    </div>
+  </div>
 </Layout>

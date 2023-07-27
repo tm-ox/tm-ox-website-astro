@@ -1,6 +1,7 @@
 ---
 title: Home
-description: Description
+description: Design and stuff... Design portfolio
+website: http://tm.oxenfree.net
 tools:
   - icon: ../assets/astro.png
     name: Astro,

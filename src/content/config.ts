@@ -1,6 +1,24 @@
 import { defineCollection, z } from "astro:content";
 
 export const collections = {
+  pages: defineCollection({
+    schema: ({ image }) =>
+      z.object({
+        title: z.string(),
+        description: z.string(),
+        website: z.string().optional(),
+        tools: z.array(
+          z.object({
+            icon: image().refine((img) => img.width >= 100, {
+              message: "Image must be at least 100 pixels wide!",
+            }).optional(),
+            name: z.string(),
+            link: z.string().optional(),
+          })
+        ), 
+      }),
+  }),
+
   work: defineCollection({
     schema: ({ image }) =>
       z.object({
