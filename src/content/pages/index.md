@@ -1,6 +1,6 @@
 ---
 title: TM.OX
-description: Design and stuff... Design portfolio
+description: Design and stuff.. Design portfolio
 website: http://tm.oxenfree.net
 sections:
   - TM.OX
