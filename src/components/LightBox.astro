@@ -20,16 +20,16 @@ const { index, src, alt, cls } = Astro.props;
 <input
     type="checkbox"
     id={`lightbox-${index}`}
-    class="lightbox-toggle hidden"
+    class="hidden lightbox-toggle"
 />
-<div class="lightbox-overlay hidden z-50">
+<div class="hidden z-50 lightbox-overlay">
     <div
-        class="flex flex-col h-full justify-between bg-background bg-opacity-90 backdrop-blur-xl"
+        class="flex flex-col justify-between h-full bg-opacity-90 bg-background backdrop-blur-xl"
     >
         <Fade class="mt-44">
             <label
                 for={`lightbox-${index}`}
-                class="text-primary hover:text-secondary text-4xl cursor-pointer mt-8 w-fit mx-auto"
+                class="mx-auto mt-8 text-4xl cursor-pointer text-primary hover:text-secondary w-fit"
                 >&#x2715;</label
             >
             <Image
@@ -37,7 +37,7 @@ const { index, src, alt, cls } = Astro.props;
                 alt={alt}
                 class="h-fit max-h-[80vh] w-max max-w-[90vw] m-auto"
             />
-            <div class="box bg-opacity-0 text-primary mb-8">
+            <div class="mb-8 bg-opacity-0 box text-primary">
                 <strong>{alt}</strong>
             </div>
         </Fade>

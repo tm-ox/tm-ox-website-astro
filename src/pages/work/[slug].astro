@@ -29,14 +29,14 @@ const { page } = Astro.props;
       <a
         slot="prev"
         href={`/work/${page.data.url.prev}`}
-        class="bg-secondary rounded-full p-2 sm:p-1 shadow-md z-50"
+        class="z-50 p-2 rounded-full shadow-md bg-secondary sm:p-1"
       >
         <Icon name="ion:md-arrow-dropleft-circle" class="icon" />
       </a>
       <a
         slot="next"
         href={`/work/${page.data.url.next}`}
-        class="bg-secondary rounded-full p-2 sm:p-1 shadow-md z-50"
+        class="z-50 p-2 rounded-full shadow-md bg-secondary sm:p-1"
       >
         <Icon name="ion:md-arrow-dropright-circle" class="icon" />
       </a>
@@ -63,7 +63,7 @@ const { page } = Astro.props;
                 <Image
                   src={tools.icon}
                   alt={tools.name}
-                  class="h-3 rounded-none my-auto w-auto mr-1"
+                  class="my-auto mr-1 w-auto h-3 rounded-none"
                 />
                 <p>
                   <strong class="mr-1">{tools.name}</strong>
@@ -77,7 +77,7 @@ const { page } = Astro.props;
         </h2>
       </div>
     </Fade>
-    <div class="grid grid-cols-2 sm:grid-cols-12 gap-3 sm:gap-4 mt-4">
+    <div class="grid grid-cols-2 gap-3 mt-4 sm:grid-cols-12 sm:gap-4">
       {
         page.data.images.flatMap((image: any, index: any) => (
           <LightBox

@@ -18,11 +18,11 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
   <!-- HI -->
   <section id="home">
     <p class="section-title">{page.data.sections[0]}</p>
-    <a href="/#work" class="hover:text-primary mb-auto">
+    <a href="/#work" class="mb-auto hover:text-primary">
       <Fade origin="sm:origin-top-left">
         <Content />
       </Fade>
-      <Icon name="ion:md-arrow-dropdown-circle" class="icon arrow mt-10" />
+      <Icon name="ion:md-arrow-dropdown-circle" class="mt-10 icon arrow" />
     </a>
   </section>
   <!-- WORK -->
@@ -30,10 +30,10 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
   <section id="work">
     <p class="section-title">{page.data.sections[1]}</p>
     <a href="/#home">
-      <Icon name="ion:md-arrow-dropup-circle" class="icon arrow mb-5" />
+      <Icon name="ion:md-arrow-dropup-circle" class="mb-5 icon arrow" />
     </a>
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3 lg:gap-4 mt-4"
+      class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 lg:gap-4"
     >
       {
         work.map((work) => (
@@ -42,7 +42,7 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
               <Image
                 src={work.data.cover.src}
                 alt={work.data.cover.alt}
-                class="rounded-b-none bg-secondary object-none aspect-video lg:aspect-square"
+                class="object-none rounded-b-none bg-secondary aspect-video lg:aspect-square"
               />
               <div class="box">
                 <strong>{work.data.client}</strong>
@@ -54,14 +54,14 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
       }
     </div>
     <a href="/#contact" class="mb-auto">
-      <Icon name="ion:md-arrow-dropdown-circle" class="icon arrow mt-10" />
+      <Icon name="ion:md-arrow-dropdown-circle" class="mt-10 icon arrow" />
     </a>
   </section>
   <!-- CONTACT -->
   <section id="contact">
     <p class="section-title">{page.data.sections[2]}</p>
     <a href="/#work">
-      <Icon name="ion:md-arrow-dropup-circle" class="icon arrow mb-5" />
+      <Icon name="ion:md-arrow-dropup-circle" class="mb-5 icon arrow" />
     </a>
     <div class="mb-auto">
       <Fade>

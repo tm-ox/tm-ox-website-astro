@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 const page = await getEntry("pages", "index");
 ---
 
-<p class="text-xs w-fit mr-1">Made with:</p>
+<p class="mr-1 text-xs w-fit">Made with:</p>
 {
   page.data.tools.flatMap((tools: any) => (
     <a href={tools.link} target="_blank" class="flex justify-center w-fit">
@@ -14,7 +14,7 @@ const page = await getEntry("pages", "index");
         alt={tools.name}
         class="h-2.5 rounded-none my-auto w-auto mr-2"
       />
-      <p class="text-xs mr-1">{tools.name}</p>
+      <p class="mr-1 text-xs">{tools.name}</p>
     </a>
   ))
 }
