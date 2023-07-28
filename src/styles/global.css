@@ -5,18 +5,6 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    @apply mx-auto font-jakarta tracking-wide;
-  }
-  body {
-    @apply bg-background text-primary overflow-x-hidden;
-  }
-  main {
-    @apply w-[95%] max-w-screen-xl mx-auto mb-24;
-  }
-  header {
-    @apply fixed top-[20px] sm:top-[30px] w-fit z-40;
-  }
   section {
     @apply flex flex-col justify-center min-h-screen w-full;
   }
@@ -41,17 +29,11 @@
   a:hover {
     @apply text-hover transition-all;
   }
-  textarea {
-    @apply h-32 text-sm;
-  }
 }
 
 @layer components {
   .icon {
     @apply w-8 h-8 sm:h-7 sm:w-7 text-background hover:text-primary transition-all;
-  }
-  .active .icon {
-    @apply fill-primary;
   }
   .arrow {
     @apply text-secondary animate-bounce-slow mx-auto;
@@ -63,7 +45,7 @@
 		flex items-center h-7 sm:h-9 mb-auto z-50;
   }
   .box {
-    @apply font-medium text-xs text-background uppercase bg-primary rounded-b-md px-2 py-1;
+    @apply flex flex-wrap justify-between font-medium text-xs leading-tight text-background uppercase bg-primary rounded-b-md px-2 py-1;
   }
 }
 
@@ -86,7 +68,6 @@ html {
 }
 
 ::-webkit-scrollbar {
-  /* display: none; */
   width: 6px;
 }
 

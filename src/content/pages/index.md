@@ -1,7 +1,11 @@
 ---
-title: Home
+title: TM.OX
 description: Design and stuff... Design portfolio
 website: http://tm.oxenfree.net
+sections:
+  - TM.OX
+  - Selected Work
+  - Contact
 tools:
   - icon: ../assets/astro.png
     name: Astro,

@@ -7,6 +7,7 @@ export const collections = {
         title: z.string(),
         description: z.string(),
         website: z.string().optional(),
+        sections: z.array(z.string()), 
         tools: z.array(
           z.object({
             icon: image().refine((img) => img.width >= 100, {

@@ -1,24 +1,26 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { Content as Home } from "../content/pages/home.md";
-import TabNav from "../components/TabNav.astro";
-import { Icon } from "astro-icon";
+import { getEntry, getCollection } from "astro:content";
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon";
+import Layout from "../layouts/Layout.astro";
+import TabNav from "../components/TabNav.astro";
 import Contact from "../components/Contact.astro";
-import { getCollection } from "astro:content";
 import Fade from "../components/Fade.astro";
+
+const page = await getEntry("pages", "index");
+const { Content } = await page.render();
 
 const work = await getCollection("work");
 work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
 ---
 
-<Layout title="TM.OX" description="Design Portfolio">
+<Layout title={page.data.title} description={page.data.description}>
   <!-- HI -->
   <section id="home">
-    <p class="section-title">TM.OX</p>
+    <p class="section-title">{page.data.sections[0]}</p>
     <a href="/#work" class="hover:text-primary mb-auto">
       <Fade origin="sm:origin-top-left">
-        <Home />
+        <Content />
       </Fade>
       <Icon name="ion:md-arrow-dropdown-circle" class="icon arrow mt-10" />
     </a>
@@ -26,12 +28,12 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
   <!-- WORK -->
   <TabNav class="sticky top-6 z-50" />
   <section id="work">
-    <p class="section-title">Selected Work</p>
+    <p class="section-title">{page.data.sections[1]}</p>
     <a href="/#home">
       <Icon name="ion:md-arrow-dropup-circle" class="icon arrow mb-5" />
     </a>
     <div
-      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 mt-4"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3 lg:gap-4 mt-4"
     >
       {
         work.map((work) => (
@@ -40,11 +42,10 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
               <Image
                 src={work.data.cover.src}
                 alt={work.data.cover.alt}
-                class="rounded-b-none bg-secondary object-none aspect-square"
+                class="rounded-b-none bg-secondary object-none aspect-video lg:aspect-square"
               />
               <div class="box">
                 <strong>{work.data.client}</strong>
-                <br />
                 {work.data.type}
               </div>
             </a>
@@ -58,7 +59,7 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
   </section>
   <!-- CONTACT -->
   <section id="contact">
-    <p class="section-title">Contact</p>
+    <p class="section-title">{page.data.sections[2]}</p>
     <a href="/#work">
       <Icon name="ion:md-arrow-dropup-circle" class="icon arrow mb-5" />
     </a>

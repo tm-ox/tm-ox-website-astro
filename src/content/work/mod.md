@@ -4,7 +4,7 @@ title: Mrs O'Donoghue
 client: Mrs O'Donoghue
 website: mrsodonoghue.netlify.app
 link: https://mrsodonoghue.netlify.app
-type: Identity Design
+type: ID Design
 tools:
   - icon: ../assets/ai.png
     name: Adobe Illustrator,

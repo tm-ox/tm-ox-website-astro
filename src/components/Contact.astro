@@ -4,9 +4,7 @@
   class="flex flex-col w-full max-w-2xl mx-auto"
 >
   <div class="flex flex-col">
-    <div
-      class="flex flex-col px-3 py-4 pb-10 rounded-lg mb-6 bg-primary shadow-md"
-    >
+    <div class="flex flex-col px-3 py-4 rounded-lg mb-6 bg-primary shadow-md">
       <input
         type="text"
         name="name"
@@ -45,6 +43,9 @@
 </form>
 
 <style>
+  textarea {
+    @apply h-32 text-sm;
+  }
   .form {
     @apply mb-4 pt-2 md:pb-[10px] px-3 rounded-lg bg-background border-0 ring-0 focus:border-0 focus:ring-0 focus:bg-background placeholder:text-primary placeholder:text-xs text-xs sm:text-sm font-medium tracking-wider;
   }

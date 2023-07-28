@@ -1,19 +1,26 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-const { title, description } = Astro.props;
-import Header from "../components/Header.astro";
+import Logo from "../components/Logo.astro";
 import Footer from "../components/Footer.astro";
+
+const { title, description } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class="bg-background text-primary font-jakarta tracking-wide">
   <head>
     <BaseHead title={title} description={description} />
   </head>
-  <body>
-    <main>
-      <Header />
+  <body class="overflow-x-hidden">
+    <main class="w-[95%] max-w-screen-xl mx-auto mb-24">
+      <header class="fixed top-[20px] sm:top-[30px] w-fit z-40">
+        <a href="/"><Logo /></a>
+      </header>
       <slot />
     </main>
-    <Footer />
+    <footer
+      class="flex flex-wrap items-center justify-center w-screen pt-2 pb-1 bg-gradient-to-b from-background via-secondary to-secondary gap-1"
+    >
+      <Footer />
+    </footer>
   </body>
 </html>

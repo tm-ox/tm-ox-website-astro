@@ -4,7 +4,7 @@ title: Oxen Free
 client: Oxen Free
 website: oxenfree.net
 link: https://oxenfree.net
-type: Identity Design
+type: ID Design
 tools:
   - icon: ../assets/ai.png
     name: Adobe Illustrator,
