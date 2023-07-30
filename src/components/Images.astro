@@ -7,7 +7,7 @@ const { src, alt, id, prev, next, cls } = Astro.props;
 ---
 
 <div class={cls}>
-  <a id={id} href={`#${id}`} rel="prefetch">
+  <a id={id} href={`#${id}`}>
     <Fade origin="origin-center">
       <div class="rounded-md shadow-md">
         <Image src={src} alt={alt} class="rounded-b-none bg-secondary" />

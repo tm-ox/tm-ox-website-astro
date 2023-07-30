@@ -39,7 +39,10 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
       {
         work.map((work) => (
           <Fade>
-            <a href={`/work/${work.slug}`} class="rounded-md shadow-md">
+            <a
+              href={`/work/${work.slug}`}
+              class="rounded-md shadow-md hover:scale-[0.99] ease-out duration-[750ms] transition-all"
+            >
               <Image
                 src={work.data.cover.src}
                 alt={work.data.cover.alt}
