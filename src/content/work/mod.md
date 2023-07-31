@@ -1,5 +1,5 @@
 ---
-order: "02"
+order: "03"
 title: Mrs O'Donoghue
 client: Mrs O'Donoghue
 website: mrsodonoghue.netlify.app
@@ -52,6 +52,6 @@ images:
     next: "01"
     class: col-span-2 sm:col-span-6 lg:col-span-4 lg:row-start-2
 url:
-  prev: oxen-free
-  next: print
+  prev: oxen
+  next: redsky
 ---

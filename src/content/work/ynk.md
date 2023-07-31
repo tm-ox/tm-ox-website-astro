@@ -1,5 +1,5 @@
 ---
-order: "06"
+order: "07"
 title: Yes No Klub - Website
 client: Yes No Klub
 website: yesnoklub.net
@@ -61,6 +61,6 @@ images:
     next: "01"
     class: col-span-1 sm:col-span-3 lg:col-span-2
 url:
-  prev: saj
-  next: fredst
+  prev: fredst
+  next: silv
 ---

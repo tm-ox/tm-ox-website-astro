@@ -1,5 +1,5 @@
 ---
-order: "01"
+order: "02"
 title: Oxen Free
 client: Oxen Free
 website: oxenfree.net
@@ -58,6 +58,6 @@ images:
     next: "01"
     class: col-span-2 sm:col-span-6 lg:col-span-4 lg:row-start-3 lg:col-start-9 lg:row-span-2
 url:
-  prev: silv
+  prev: logos
   next: mod
 ---

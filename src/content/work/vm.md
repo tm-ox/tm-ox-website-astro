@@ -16,7 +16,7 @@ tools:
     name: NetlifyCMS
     link: https://v1.netlifycms.org
 description: Twitter image generator for multichain liquidity protocol Velocimeter.
-cover: { src: ./vm/vm-web-apr.png, alt: Oxen Free Minimal Logo }
+cover: { src: ./vm/vm-web-apr.png, alt: Velocimeter Social Media App }
 images:
   - src: ./vm/vm-web-home.png
     alt: Home
@@ -31,7 +31,7 @@ images:
     next: "03"
     class: col-span-2 sm:col-span-12 lg:col-span-6 lg:row-start-2
   - src: ./vm/vm-web-apr.png
-    alt: APR Tempklate
+    alt: APR Template
     prev: "02"
     id: "03"
     next: "04"
@@ -43,12 +43,12 @@ images:
     next: "05"
     class: col-span-2 sm:col-span-6 lg:col-span-6 lg:row-span-2
   - src: ./vm/vm-web-bribe.png
-    alt: Partner Bribe TemplateMatched Bribe Template
+    alt: Partner Bribe Template
     prev: "04"
     id: "05"
     next: "01"
     class: col-span-2 sm:col-span-12 lg:col-span-6
 url:
   prev: silv
-  next: oxen-free
+  next: logos
 ---

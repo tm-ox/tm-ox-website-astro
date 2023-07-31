@@ -1,5 +1,5 @@
 ---
-order: "05"
+order: "06"
 title: Share A Jet
 client: Share A Jet
 website: shareajet.vip
@@ -85,6 +85,6 @@ images:
   #   next: "01"
   #   class: col-span-2 sm:col-span-6 md:col-span-4 lg:col-span-3 lg:col-start-10 lg:row-start-7 lg:row-span-2
 url:
-  prev: logos
-  next: ynk
+  prev: print
+  next: fredst
 ---

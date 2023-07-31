@@ -1,5 +1,5 @@
 ---
-order: "03"
+order: "05"
 title: Print Design
 client: Various
 website: ""
@@ -13,7 +13,7 @@ tools:
     name: Adobe Indesign
     link: https://www.adobe.com/products/indesign.html
 description: Various print designs.
-cover: { src: ./print//OX_UnKwn03.jpg, alt: Oxen Free Minimal Logo }
+cover: { src: ./print//OX_UnKwn03.jpg, alt: Various Print Designs }
 images:
   - src: ./print/compass-a4.png
     alt: Plumbing & gas supplier flyer
@@ -94,6 +94,6 @@ images:
     next: "01"
     class: col-span-1 sm:col-span-6 md:col-span-6 lg:col-span-4
 url:
-  prev: mod
-  next: logos
+  prev: redsky
+  next: saj
 ---

@@ -1,5 +1,5 @@
 ---
-order: "04"
+order: "01"
 title: Logo Design
 client: Various
 website: ""
@@ -109,6 +109,6 @@ images:
     next: "01"
     class: col-span-2 sm:col-span-6 md:col-span-4 lg:col-span-3
 url:
-  prev: print
-  next: saj
+  prev: vm
+  next: oxen
 ---
