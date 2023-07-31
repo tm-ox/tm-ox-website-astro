@@ -6,6 +6,7 @@ import Layout from "../../layouts/Layout.astro";
 import TabNav from "../../components/TabNav.astro";
 import Fade from "../../components/Fade.astro";
 import Images from "../../components/Images.astro";
+import FadeOnce from "../../components/FadeOnce.astro";
 
 export async function getStaticPaths() {
   const collection = await getCollection("work");
@@ -26,6 +27,7 @@ const data = page.data;
 <Layout title={`TM.OX - ${data.title}`}>
   <p class="section-title">TM.OX</p>
   <div class="sm:-mt-2">
+    <!-- Nav -->
     <TabNav>
       <a
         slot="prev"
@@ -42,7 +44,8 @@ const data = page.data;
         <Icon name="ion:md-arrow-dropright-circle" class="icon" />
       </a>
     </TabNav>
-    <Fade origin="origin-top-left">
+    <!-- Details -->
+    <FadeOnce origin="origin-top-left">
       <div class="mt-12 sm:mt-7">
         <p>Client:<strong class="ml-1">{data.client}</strong></p>
         {
@@ -77,7 +80,8 @@ const data = page.data;
           {data.description}
         </h2>
       </div>
-    </Fade>
+    </FadeOnce>
+    <!-- Images -->
     <div class="grid grid-cols-2 gap-3 mt-4 sm:grid-cols-12 sm:gap-4">
       {
         data.images.flatMap((image: any) => (
