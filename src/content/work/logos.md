@@ -110,5 +110,5 @@ images:
     class: col-span-2 sm:col-span-6 md:col-span-4 lg:col-span-3
 url:
   prev: print
-  next: ynk
+  next: saj
 ---

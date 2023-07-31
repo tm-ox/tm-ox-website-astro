@@ -2,20 +2,21 @@
 import { Image } from "astro:assets";
 import TabLb from "../components/TabLb.astro";
 import Fade from "../components/Fade.astro";
+import FadeOnce from "./FadeOnce.astro";
 
 const { src, alt, id, prev, next, cls } = Astro.props;
 ---
 
 <div class={cls}>
   <a id={id} href={`#${id}`}>
-    <Fade origin="origin-center">
+    <FadeOnce origin="origin-center">
       <div class="rounded-md shadow-md">
         <Image src={src} alt={alt} class="rounded-b-none bg-secondary" />
         <div class="box">
           <strong>{alt}</strong>
         </div>
       </div>
-    </Fade>
+    </FadeOnce>
     <div
       class="hidden fixed top-0 left-0 z-50 flex-col justify-center w-full h-full bg-opacity-90 backdrop-blur-xl cursor-default pointer-events-none lightbox bg-background"
     >

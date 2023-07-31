@@ -1,5 +1,5 @@
 ---
-order: "06"
+order: "07"
 title: Fred St.
 client: Fred St.
 website: fredst.com
