@@ -34,7 +34,7 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
       <Icon name="ion:md-arrow-dropup-circle" class="mb-5 icon arrow" />
     </a>
     <div
-      class="grid grid-cols-1 gap-3 mt-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 lg:gap-4"
+      class="grid grid-cols-2 gap-3 mt-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 lg:gap-4"
     >
       {
         work.map((work) => (
@@ -46,7 +46,7 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
               <Image
                 src={work.data.cover.src}
                 alt={work.data.cover.alt}
-                class="object-none rounded-b-none bg-secondary aspect-video lg:aspect-square"
+                class="object-none rounded-b-none bg-secondary aspect-square sm:aspect-video lg:aspect-square"
               />
               <div class="box">
                 <strong>{work.data.client}</strong>
