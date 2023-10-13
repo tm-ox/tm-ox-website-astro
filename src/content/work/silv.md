@@ -12,7 +12,7 @@ tools:
   - icon: ../assets/tailwind.png
     name: Tailwindcss
     link: https://tailwindcss.com
-description: Visual identity and selected collateral for Yogyakartan cafe and bakery.
+description: Website for boutique Australian wine producer.
 cover: { src: ./silv/silv-web-about.png, alt: Silvagenitus Website }
 images:
   - src: ./silv/silv-web-home.png
