@@ -13,7 +13,7 @@ const { src, alt, id, prev, next, cls } = Astro.props;
       <div class="rounded-md shadow-md">
         <Image src={src} alt={alt} class="rounded-b-none bg-secondary" />
         <div class="box">
-          <strong>{alt}</strong>
+          {alt}
         </div>
       </div>
     </FadeOnce>

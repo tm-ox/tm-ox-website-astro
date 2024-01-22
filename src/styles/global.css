@@ -9,13 +9,13 @@
     @apply flex flex-col justify-center w-full min-h-screen snap-both mb-6 sm:mb-0;
   }
   h1 {
-    @apply font-extrabold text-5xl sm:text-6xl md:text-7xl xl:text-8xl leading-[55px] sm:leading-[65px] md:leading-[75px] xl:leading-[105px] text-center sm:text-left mb-0;
+    @apply font-extrabold text-5xl sm:text-5xl md:text-6xl xl:text-7xl leading-[55px] sm:leading-[3.7rem] md:leading-[4.5rem] xl:leading-[5rem] text-center sm:text-left mb-0;
   }
   h2 {
-    @apply text-sm font-extralight text-center sm:text-base md:text-lg lg:text-xl sm:text-left;
+    @apply font-extralight text-center sm:text-left;
   }
   h3 {
-    @apply mt-2 text-sm font-extralight text-center sm:text-base md:text-lg lg:text-xl sm:text-left;
+    @apply mt-2 font-extralight text-center sm:text-left;
   }
   p {
     @apply w-full text-sm font-light leading-relaxed text-left;
@@ -39,13 +39,13 @@
     @apply hidden sm:block mx-auto text-secondary animate-bounce-slow;
   }
   .section-title {
-    @apply sticky top-[20px] sm:top-[30px]
-		w-fit ml-auto sm:ml-12 xl:ml-12 sm:mr-auto 
+    @apply sticky top-[17px] sm:top-[27px]
+		w-fit ml-auto sm:ml-10 xl:ml-10 sm:mr-auto 
 		text-base font-bold uppercase tracking-wide
 		flex items-center h-7 sm:h-9 mb-auto z-50;
   }
   .box {
-    @apply flex flex-col sm:flex-row flex-wrap justify-between px-2 py-1 text-xs font-medium leading-tight uppercase rounded-b-md text-background bg-primary;
+    @apply flex flex-col sm:flex-row flex-wrap justify-between px-2 py-1 md:text-[0.65rem] font-semibold leading-none uppercase rounded-b-md text-background bg-primary;
   }
 }
 
