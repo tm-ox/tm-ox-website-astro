@@ -106,6 +106,18 @@ images:
     alt: Creative services company
     prev: "15"
     id: "16"
+    next: "17"
+    class: col-span-2 sm:col-span-6 md:col-span-4 lg:col-span-2
+  - src: ./logos/mod.png
+    alt: Bakery / Cafe
+    prev: "16"
+    id: "17"
+    next: "18"
+    class: col-span-2 sm:col-span-6 md:col-span-4 lg:col-span-2
+  - src: ./logos/ox-min.png
+    alt: Bar & Kitchen
+    prev: "17"
+    id: "18"
     next: "01"
     class: col-span-2 sm:col-span-6 md:col-span-4 lg:col-span-2
 url:
