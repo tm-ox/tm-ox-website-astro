@@ -45,7 +45,7 @@
 		flex items-center h-7 sm:h-9 mb-auto z-50;
   }
   .box {
-    @apply flex flex-col sm:flex-row flex-wrap justify-between px-2 py-1 md:text-[0.65rem] font-semibold leading-none uppercase rounded-b-md text-background bg-primary;
+    @apply flex flex-col sm:flex-row flex-wrap justify-between px-2 py-1 text-[0.65rem] font-semibold leading-none uppercase rounded-b-md text-background bg-primary;
   }
 }
 

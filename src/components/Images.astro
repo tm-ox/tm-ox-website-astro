@@ -10,7 +10,9 @@ const { src, alt, id, prev, next, cls } = Astro.props;
 <div class={cls}>
   <a id={id} href={`#${id}`}>
     <FadeOnce origin="origin-center">
-      <div class="rounded-md shadow-md hover:scale-[0.98] ease-out duration-[1000ms] transition-all">
+      <div
+        class="rounded-md shadow-md hover:scale-[0.98] ease-out duration-[1000ms] transition-all"
+      >
         <Image src={src} alt={alt} class="rounded-b-none bg-secondary" />
         <div class="box">
           {alt}
@@ -34,7 +36,7 @@ const { src, alt, id, prev, next, cls } = Astro.props;
           <div
             class="justify-center mt-4 mb-0 bg-opacity-0 sm:mb-4 h-fit box text-primary"
           >
-            <strong>{alt}</strong>
+            {alt}
           </div>
         </div>
       </Fade>

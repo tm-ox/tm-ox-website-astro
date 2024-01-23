@@ -44,13 +44,13 @@ images:
     prev: "04"
     id: "05"
     next: "06"
-    class: col-span-2 sm:col-span-8 lg:col-span-6 lg:row-start-2 lg:col-start-7
+    class: col-span-1 sm:col-span-8 lg:col-span-6 lg:row-start-2 lg:col-start-7
   - src: ./print/warrlja-back.png
     alt: Indigenous tours flyer - back
     prev: "05"
     id: "06"
     next: "07"
-    class: col-span-2 sm:col-span-8 lg:col-span-6 lg:col-start-7 lg:row-start-3
+    class: col-span-1 sm:col-span-8 lg:col-span-6 lg:col-start-7 lg:row-start-3
   - src: ./print/MYC-nda-mock.png
     alt: NDA QR Placard
     prev: "06"
