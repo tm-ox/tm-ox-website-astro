@@ -36,7 +36,7 @@
     @apply w-8 h-8 transition-all sm:h-7 sm:w-7 text-background hover:text-primary;
   }
   .arrow {
-    @apply hidden sm:block mx-auto text-secondary animate-bounce-slow;
+    @apply hidden sm:block mr-auto text-secondary animate-bounce-slow;
   }
   .section-title {
     @apply sticky top-[17px] sm:top-[27px]
@@ -46,6 +46,15 @@
   }
   .box {
     @apply flex flex-col sm:flex-row flex-wrap justify-between px-2 py-1 md:text-[0.65rem] font-semibold leading-none uppercase rounded-b-md text-background bg-primary;
+  }
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
   }
 }
 

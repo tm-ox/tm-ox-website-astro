@@ -16,7 +16,24 @@ module.exports = {
       animation: {
         "pulse-slow": "pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "bounce-slow": "bounce 2s infinite",
+        "blob": "blob 30s infinite"
       },
+      keyframes: {
+        blob: {
+          "0%": {
+            transform: "translate(0px, 0px) scale(1)"
+          },
+          "33%": {
+            transform: "translate(0px, -5px) scale(1.005)"
+          },
+          "66%": {
+            transform: "translate(-2.5px, 5px) scale(0.999)"
+          },
+          "100%": {
+            transform: "translate(0px, 0px) scale(1)"
+          }
+        }
+      }
     },
     transition: {
       trans: "all 0.5s ease-in-out",

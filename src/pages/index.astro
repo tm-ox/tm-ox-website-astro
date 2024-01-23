@@ -27,7 +27,7 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
     </a>
   </section>
   <!-- WORK -->
-  <TabNav class="sticky top-6 z-50" />
+  <TabNav class="sticky top-6" />
   <section id="work">
     <p class="section-title">{data.sections[1]}</p>
     <a href="/#home">
@@ -62,7 +62,7 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
     </a>
   </section>
   <!-- CONTACT -->
-  <section id="contact">
+  <section id="contact" class="relative">
     <p class="section-title">{data.sections[2]}</p>
     <a href="/#work">
       <Icon name="ion:md-arrow-dropup-circle" class="mb-5 icon arrow" />
