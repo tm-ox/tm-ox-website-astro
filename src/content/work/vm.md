@@ -49,6 +49,6 @@ images:
     next: "01"
     class: col-span-2 sm:col-span-12 lg:col-span-6
 url:
-  prev: silv
-  next: logos
+  prev: ynk
+  next: mjo
 ---

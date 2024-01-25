@@ -6,7 +6,7 @@ website: shareajet.vip
 link: https://www.shareajet.vip
 type: UI Design
 tools:
-  - icon: ../assets/penpot-icon.svg
+  - icon: ../assets/pp.png
     name: Penpot
     link: https://penpot.app
 description: UI design for private jet charter company Share A Jet, designed in Penpot.

@@ -19,12 +19,44 @@ work.sort((a, b) => Date.parse(a.data.order) - Date.parse(b.data.order));
   <!-- HI -->
   <section id="home">
     <p class="section-title">{data.sections[0]}</p>
-    <a href="/#work" class="mb-auto hover:text-primary">
-      <Fade origin="sm:origin-top-left">
+    <Fade origin="sm:origin-top-left my-auto">
+      <a href="/#work" class="hover:text-primary">
         <Content />
-      </Fade>
-      <Icon name="ion:md-arrow-dropdown-circle" class="mt-10 icon arrow" />
-    </a>
+      </a>
+      <h3>{data.subhead1}</h3>
+      <h2 class="font-bold uppercase">{data.sub1}</h2>
+      <div class="flex my-2 mx-auto sm:ml-0">
+        {
+          page.data.sub1skills.flatMap((skills1: any) => (
+            <a href={skills1.link} target="_blank" class="justify-center">
+              <Image
+                src={skills1.icon}
+                alt={skills1.name}
+                class="my-auto mr-3 w-auto h-3 rounded-none"
+              />
+            </a>
+          ))
+        }
+      </div>
+      <h3>{data.subhead2}</h3>
+      <h2 class="font-bold uppercase">{data.sub2}</h2>
+      <div class="flex mt-2 mx-auto sm:ml-0">
+        {
+          page.data.sub2skills.flatMap((skills2: any) => (
+            <a href={skills2.link} target="_blank" class="justify-center">
+              <Image
+                src={skills2.icon}
+                alt={skills2.name}
+                class="my-auto mr-3 w-auto h-3 rounded-none"
+              />
+            </a>
+          ))
+        }
+      </div>
+      <a href="/#work">
+        <Icon name="ion:md-arrow-dropdown-circle" class="mt-10 icon arrow" />
+      </a>
+    </Fade>
   </section>
   <!-- WORK -->
   <TabNav class="sticky top-6" />

@@ -33,7 +33,7 @@
 
 @layer components {
   .icon {
-    @apply w-8 h-8 transition-all sm:h-7 sm:w-7 text-background hover:text-primary;
+    @apply w-8 h-8 transition-all sm:h-7 sm:w-7 text-background hover:text-primary cursor-pointer;
   }
   .arrow {
     @apply hidden sm:block mr-auto text-secondary animate-bounce-slow;
