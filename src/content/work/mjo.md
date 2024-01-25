@@ -21,7 +21,7 @@ tools:
   - icon: ../assets/netlify.png
     name: NetlifyCMS
     link: https://v1.netlifycms.org
-description: Website for Australian ortgage broker.
+description: Website for Australian mortgage broker.
 cover: { src: ./mjo/mjo-web-mobile-menu.png, alt: MJO Website }
 images:
   - src: ./mjo/mjo-web-all.png
