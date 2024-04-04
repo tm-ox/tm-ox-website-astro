@@ -1,8 +1,8 @@
 ---
 import "../styles/global.css";
-import { GoogleAnalytics } from "astro-google-analytics";
+// import { GoogleAnalytics } from "astro-google-analytics";
 
-const { title, description = "" } = Astro.props;
+const { title, description = "TM.OX" } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -24,7 +24,22 @@ const { title, description = "" } = Astro.props;
 <meta property="twitter:title" content={title} />
 {description && <meta property="twitter:description" content={description} />}
 
-<GoogleAnalytics id="G-V24HSVJPKE" />
+<!-- <GoogleAnalytics id="G-V24HSVJPKE" /> -->
+
+<!-- Google tag (gtag.js) -->
+<script
+  type="text/partytown"
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-V24HSVJPKE"></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-V24HSVJPKE");
+</script>
 
 <script
   defer
