@@ -6,9 +6,6 @@ import prefetch from "@astrojs/prefetch";
 
 // https://astro.build/config
 export default defineConfig({
-  experimental: {
-    assets: true
-  },
   integrations: [tailwind({
     applyBaseStyles: false
   }), alpinejs(), prefetch()]
