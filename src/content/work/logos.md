@@ -14,7 +14,7 @@ cover: { src: ./logos/lupa.png, alt: Lupa Logo }
 images:
   - src: ./logos/dark-house.png
     alt: Audio visual art space
-    prev: "16"
+    prev: "19"
     id: "01"
     next: "02"
     class: col-span-1 sm:col-span-6 md:col-span-4 lg:col-span-2
@@ -100,12 +100,6 @@ images:
     alt: Mensware designer
     prev: "14"
     id: "15"
-    next: "16"
-    class: col-span-1 sm:col-span-6 md:col-span-4 lg:col-span-2
-  - src: ./logos/of-e.png
-    alt: Creative services company
-    prev: "15"
-    id: "16"
     next: "17"
     class: col-span-1 sm:col-span-6 md:col-span-4 lg:col-span-2
   - src: ./logos/mod.png
@@ -118,6 +112,12 @@ images:
     alt: Bar & Kitchen
     prev: "17"
     id: "18"
+    next: "19"
+    class: col-span-1 sm:col-span-6 md:col-span-4 lg:col-span-2
+  - src: ./logos/knwldg.png
+    alt: Event Organiser
+    prev: "18"
+    id: "19"
     next: "01"
     class: col-span-1 sm:col-span-6 md:col-span-4 lg:col-span-2
 url:
