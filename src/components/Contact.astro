@@ -1,55 +1,57 @@
 <form
-  action="https://api.staticforms.xyz/submit"
-  method="post"
-  class="flex flex-col mx-auto w-full max-w-2xl"
+    action="https://api.staticforms.xyz/submit"
+    method="post"
+    class="flex flex-col mx-auto w-full max-w-2xl"
 >
-  <div class="flex flex-col">
-    <div class="flex flex-col py-4 px-3 mb-6 rounded-lg shadow-md bg-primary">
-      <input
-        type="text"
-        name="name"
-        placeholder="NAME"
-        required
-        class="form autofill:bg-primary"
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="EMAIL"
-        required
-        class="form"
-      />
-      <textarea
-        name="message"
-        placeholder="MESSAGE"
-        required
-        class="pt-3 pb-0 mb-0 form"></textarea>
-      <input type="text" name="honeypot" style="display: none" />
-      <input
-        type="hidden"
-        name="accessKey"
-        value="5e4d9f47-1776-489c-a687-594dc4fe4bb6"
-      />
-      <input type="hidden" name="subject" value="Contact - TM.OX" />
-      <input type="hidden" name="replyTo" value="@" />
-      <input
-        type="hidden"
-        name="redirectTo"
-        value="https://tm.oxenfree.net/sent"
-      />
+    <div class="flex flex-col">
+        <div
+            class="flex flex-col py-4 px-3 mb-6 rounded-lg shadow-md bg-primary"
+        >
+            <input
+                type="text"
+                name="name"
+                placeholder="NAME"
+                required
+                class="form autofill:bg-primary"
+            />
+            <input
+                type="email"
+                name="email"
+                placeholder="EMAIL"
+                required
+                class="form"
+            />
+            <textarea
+                name="message"
+                placeholder="MESSAGE"
+                required
+                class="pt-3 pb-0 mb-0 form"></textarea>
+            <input type="text" name="honeypot" style="display: none" />
+            <input
+                type="hidden"
+                name="accessKey"
+                value="020ddf74-0c4e-4e9b-931d-e0fef80e6d23"
+            />
+            <input type="hidden" name="subject" value="Contact - TM.OX" />
+            <input type="hidden" name="replyTo" value="@" />
+            <input
+                type="hidden"
+                name="redirectTo"
+                value="https://tm.oxenfree.net/sent"
+            />
+        </div>
+        <button class="submitButton shadow-3xl" type="submit">SUBMIT</button>
     </div>
-    <button class="submitButton shadow-3xl" type="submit">SUBMIT</button>
-  </div>
 </form>
 
 <style>
-  textarea {
-    @apply h-32 text-sm;
-  }
-  .form {
-    @apply mb-4 pt-2 md:pb-[10px] px-3 rounded-lg bg-background border-0 ring-0 focus:border-0 focus:ring-0 focus:bg-background placeholder:text-primary placeholder:text-xs text-xs sm:text-sm font-medium tracking-wider;
-  }
-  .submitButton {
-    @apply self-center bg-primary text-sm font-bold text-background hover:bg-hover py-1 px-6 rounded-lg shadow-md;
-  }
+    textarea {
+        @apply h-32 text-sm;
+    }
+    .form {
+        @apply mb-4 pt-2 md:pb-[10px] px-3 rounded-lg bg-background border-0 ring-0 focus:border-0 focus:ring-0 focus:bg-background placeholder:text-primary placeholder:text-xs text-xs sm:text-sm font-medium tracking-wider;
+    }
+    .submitButton {
+        @apply self-center bg-primary text-sm font-bold text-background hover:bg-hover py-1 px-6 rounded-lg shadow-md;
+    }
 </style>
