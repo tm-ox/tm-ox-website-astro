@@ -114,8 +114,8 @@ images:
     id: "18"
     next: "19"
     class: col-span-1 sm:col-span-6 md:col-span-4 lg:col-span-2
-  - src: ./logos/knwldg.png
-    alt: Event Organiser
+  - src: ./logos/tg.png
+    alt: Leadership Consultancy
     prev: "18"
     id: "19"
     next: "01"
