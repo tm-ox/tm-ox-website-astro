@@ -9,6 +9,9 @@ tools:
   - icon: ../assets/ai.png
     name: Adobe Illustrator
     link: https://www.adobe.com/products/illustrator.html
+  - icon: ../assets/is.png
+    name: Inkscape
+    link: https://inkscape.org
 description: Various logo designs.
 cover: { src: ./logos/lupa.png, alt: Lupa Logo }
 images:
